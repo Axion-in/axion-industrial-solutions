@@ -2628,7 +2628,7 @@ WHY CHOOSE US
 
     display:grid;
 
-    grid-template-columns:1fr 750px;
+   grid-template-columns:58% 42%;
 
     gap:15px;   /* white gap between image and blue strip */
    
@@ -2733,7 +2733,7 @@ BOTTOM BLUE STRIP
 
     background:#0B4EA2;
 
-    margin-top:0;
+    margin-top:8px;
 
     width:100%;
 
@@ -3131,45 +3131,51 @@ BOTTOM BLUE STRIP
 
 .warehouse-strip{
 
-    margin-top:15px;   /* same white gap */
-
     width:100%;
 
     background:#0B4EA2;
 
-    border-radius:22px;
+    padding:28px 30px;
 
-    padding:30px 40px;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:nowrap;
 
 }
 
 .warehouse-box{
 
+    flex:1;
+
+    min-width:0;
+
     text-align:center;
 
     color:#fff;
-
-    transition:.35s;
 
 }
 
 .warehouse-box i{
 
-    width:75px;
+    width:72px;
 
-    height:75px;
+    height:72px;
 
-    line-height:75px;
+    line-height:72px;
 
     border-radius:50%;
 
-    border:2px solid rgba(255,255,255,.35);
+    border:2px solid rgba(255,255,255,.30);
 
     font-size:30px;
 
-    margin-bottom:16px;
-
-    transition:.35s;
+    margin-bottom:15px;
 
 }
 
@@ -3337,11 +3343,11 @@ WAREHOUSE & LOGISTICS RESPONSIVE
 
 .warehouse-strip{
 
+    display:grid;
+
     grid-template-columns:repeat(2,1fr);
 
-    gap:20px;
-
-    padding:25px;
+    gap:25px;
 
 }
 
