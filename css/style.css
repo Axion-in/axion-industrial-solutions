@@ -3514,7 +3514,7 @@ CALL TO ACTION
 
 /* Right */
 
-.cta-right{
+.cta-section .cta-right{
 
     display:flex;
 
@@ -3528,7 +3528,7 @@ CALL TO ACTION
 
 /* Buttons */
 
-.cta-btn{
+.cta-section .cta-btn{
 
     display:inline-flex;
 
@@ -3554,7 +3554,7 @@ CALL TO ACTION
 
 /* White Button */
 
-.quote-btn{
+.cta-section .quote-btn{
 
     background:#fff;
 
@@ -3562,7 +3562,7 @@ CALL TO ACTION
 
 }
 
-.quote-btn:hover{
+.cta-section .quote-btn:hover{
 
     background:#F1F5FF;
 
@@ -3574,7 +3574,7 @@ CALL TO ACTION
 
 /* Outline Button */
 
-.call-btn{
+.cta-section .call-btn{
 
     border:2px solid #fff;
 
@@ -3584,7 +3584,7 @@ CALL TO ACTION
 
 }
 
-.call-btn:hover{
+.cta-section .call-btn:hover{
 
     background:#fff;
 
@@ -3598,7 +3598,7 @@ CALL TO ACTION
 
 /* Icons */
 
-.cta-btn i{
+.cta-section .cta-btn i{
 
     font-size:18px;
 
@@ -3688,7 +3688,7 @@ CTA RESPONSIVE
 
 }
 
-.cta-right{
+.cta-section .cta-right{
 
     justify-content:center;
 
@@ -3736,7 +3736,7 @@ CTA RESPONSIVE
 
 }
 
-.cta-right{
+.cta-section .cta-right{
 
     flex-direction:column;
 
@@ -3746,7 +3746,7 @@ CTA RESPONSIVE
 
 }
 
-.cta-btn{
+.cta-section .cta-btn{
 
     width:100%;
 
