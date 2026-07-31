@@ -283,3 +283,27 @@ item.classList.add("show");
 });
 
 });
+
+/*=========================================
+CTA SCROLL ANIMATION
+=========================================*/
+
+const ctaItems = document.querySelectorAll(
+'.cta-left,.cta-right'
+);
+
+window.addEventListener("scroll",()=>{
+
+    ctaItems.forEach(item=>{
+
+        const top = item.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 80){
+
+            item.classList.add("show");
+
+        }
+
+    });
+
+});
