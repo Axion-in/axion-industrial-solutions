@@ -307,3 +307,69 @@ window.addEventListener("scroll",()=>{
     });
 
 });
+
+/*=========================================
+TESTIMONIAL SLIDER
+=========================================*/
+
+const testimonialTrack = document.querySelector(".testimonial-track");
+const testimonialCards = document.querySelectorAll(".testimonial-card");
+const prevBtn = document.querySelector(".testimonial-prev");
+const nextBtn = document.querySelector(".testimonial-next");
+
+if (testimonialTrack && testimonialCards.length > 0) {
+
+    let index = 0;
+
+    function updateTestimonials(){
+
+        testimonialTrack.style.transform =
+            `translateX(-${index * 100}%)`;
+
+    }
+
+    nextBtn.addEventListener("click",()=>{
+
+        index++;
+
+        if(index >= testimonialCards.length){
+
+            index = 0;
+
+        }
+
+        updateTestimonials();
+
+    });
+
+    prevBtn.addEventListener("click",()=>{
+
+        index--;
+
+        if(index < 0){
+
+            index = testimonialCards.length - 1;
+
+        }
+
+        updateTestimonials();
+
+    });
+
+    /* Auto Slide */
+
+    setInterval(()=>{
+
+        index++;
+
+        if(index >= testimonialCards.length){
+
+            index = 0;
+
+        }
+
+        updateTestimonials();
+
+    },5000);
+
+}
