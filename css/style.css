@@ -3423,3 +3423,379 @@ WAREHOUSE ANIMATION
     transform:translateY(0);
 
 }
+
+/*=========================================
+CALL TO ACTION
+=========================================*/
+
+.cta-section{
+
+    padding:90px 0;
+
+    background:linear-gradient(135deg,#0B4EA2,#1565C0);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Container */
+
+.cta-container{
+
+    max-width:1320px;
+
+    margin:auto;
+
+    padding:0 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+/* Left */
+
+.cta-left{
+
+    flex:1;
+
+}
+
+.cta-small-title{
+
+    display:inline-block;
+
+    color:#BFD8FF;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+    text-transform:uppercase;
+
+}
+
+.cta-left h2{
+
+    color:#fff;
+
+    font-size:46px;
+
+    font-weight:800;
+
+    line-height:1.25;
+
+    margin-bottom:22px;
+
+}
+
+.cta-left p{
+
+    color:#F5F7FA;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    max-width:700px;
+
+}
+
+/* Right */
+
+.cta-right{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+/* Buttons */
+
+.cta-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:all .35s ease;
+
+}
+
+/* White Button */
+
+.quote-btn{
+
+    background:#fff;
+
+    color:#0B4EA2;
+
+}
+
+.quote-btn:hover{
+
+    background:#F1F5FF;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+}
+
+/* Outline Button */
+
+.call-btn{
+
+    border:2px solid #fff;
+
+    color:#fff;
+
+    background:transparent;
+
+}
+
+.call-btn:hover{
+
+    background:#fff;
+
+    color:#0B4EA2;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+
+}
+
+/* Icons */
+
+.cta-btn i{
+
+    font-size:18px;
+
+}
+
+/* Decorative Circle */
+
+.cta-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+
+    height:380px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+.cta-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:50%;
+
+    bottom:-90px;
+
+    left:-90px;
+
+}
+
+/*=========================================
+CTA RESPONSIVE
+=========================================*/
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+.cta-container{
+
+    gap:40px;
+
+}
+
+.cta-left h2{
+
+    font-size:40px;
+
+}
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+.cta-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:35px;
+
+}
+
+.cta-left p{
+
+    max-width:100%;
+
+}
+
+.cta-right{
+
+    justify-content:center;
+
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.cta-section{
+
+    padding:60px 20px;
+
+}
+
+.cta-container{
+
+    padding:0;
+
+}
+
+.cta-left h2{
+
+    font-size:30px;
+
+    line-height:1.35;
+
+}
+
+.cta-left p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+.cta-small-title{
+
+    font-size:13px;
+
+    letter-spacing:1.5px;
+
+}
+
+.cta-right{
+
+    flex-direction:column;
+
+    width:100%;
+
+    gap:15px;
+
+}
+
+.cta-btn{
+
+    width:100%;
+
+    justify-content:center;
+
+    padding:16px 20px;
+
+}
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+.cta-left h2{
+
+    font-size:26px;
+
+}
+
+.cta-left p{
+
+    font-size:14px;
+
+}
+
+}
+
+/*=========================================
+CTA ANIMATION
+=========================================*/
+
+.cta-left,
+.cta-right{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:all .8s ease;
+
+}
+
+.cta-left.show,
+.cta-right.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
