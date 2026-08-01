@@ -1208,31 +1208,327 @@ MOBILE
 
 }
 
-/* ===========================
-CONTACT
-=========================== */
+/*=========================================
+CONTACT SECTION
+=========================================*/
 
-.contact{
-    background:#f7f9fc;
+.contact-section{
+
+    padding:100px 0;
+
+    background:#f8fafc;
+
 }
 
-.contact-box{
-    max-width:700px;
-    margin:auto;
-    background:#fff;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+.contact-heading{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
 }
 
-.contact-box p{
-    margin:18px 0;
+.contact-heading h5{
+
+    color:#0B4EA2;
+
     font-size:18px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
 }
 
-.contact-box i{
-    color:#17c2ea;
-    width:30px;
+.contact-heading h2{
+
+    font-size:46px;
+
+    color:#111;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+}
+
+.contact-heading p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+CONTAINER
+==========================*/
+
+.contact-container{
+
+    max-width:1320px;
+
+    margin:auto;
+
+    padding:0 35px;
+
+    display:grid;
+
+    grid-template-columns:1fr 430px;
+
+    gap:45px;
+
+    align-items:start;
+
+}
+
+/*==========================
+LEFT CARD
+==========================*/
+
+.contact-form-card{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.contact-form-card h3{
+
+    font-size:32px;
+
+    color:#111;
+
+    margin-bottom:35px;
+
+    font-weight:700;
+
+}
+
+/*==========================
+INPUTS
+==========================*/
+
+.input-box{
+
+    margin-bottom:22px;
+
+}
+
+.input-box input,
+.input-box textarea{
+
+    width:100%;
+
+    padding:17px 18px;
+
+    border:1px solid #dcdcdc;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.35s;
+
+    font-family:inherit;
+
+}
+
+.input-box textarea{
+
+    resize:none;
+
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+
+    border-color:#0B4EA2;
+
+    box-shadow:0 0 0 4px rgba(11,78,162,.10);
+
+}
+
+/*==========================
+BUTTON
+==========================*/
+
+.contact-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    background:#0B4EA2;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.contact-btn:hover{
+
+    background:#083a7d;
+
+    transform:translateY(-3px);
+
+}
+
+.contact-btn i{
+
+    margin-right:10px;
+
+}
+
+/*==========================
+RIGHT CARD
+==========================*/
+
+.contact-info-card{
+
+    background:#fff;
+
+    padding:45px 35px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.contact-info-card h3{
+
+    font-size:32px;
+
+    color:#111;
+
+    margin-bottom:35px;
+
+}
+
+/*==========================
+CONTACT ITEM
+==========================*/
+
+.contact-item{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:32px;
+
+    align-items:flex-start;
+
+}
+
+.contact-icon{
+
+    width:60px;
+
+    height:60px;
+
+    background:#0B4EA2;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.contact-item h4{
+
+    color:#111;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+.contact-item p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+.contact-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.contact-section{
+
+padding:70px 20px;
+
+}
+
+.contact-heading h2{
+
+font-size:34px;
+
+}
+
+.contact-form-card,
+.contact-info-card{
+
+padding:30px;
+
+}
+
 }
 
 /* ===========================
