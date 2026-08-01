@@ -309,67 +309,57 @@ window.addEventListener("scroll",()=>{
 });
 
 /*=========================================
-TESTIMONIAL SLIDER
+EMAILJS
 =========================================*/
 
-const testimonialTrack = document.querySelector(".testimonial-track");
-const testimonialCards = document.querySelectorAll(".testimonial-card");
-const prevBtn = document.querySelector(".testimonial-prev");
-const nextBtn = document.querySelector(".testimonial-next");
+emailjs.init({
+    publicKey: "YOUR_PUBLIC_KEY"
+});
 
-if (testimonialTrack && testimonialCards.length > 0) {
+const form = document.getElementById("contactForm");
+const popup = document.getElementById("popup");
+const popupClose = document.getElementById("popupClose");
 
-    let index = 0;
+form.addEventListener("submit", function(e){
 
-    function updateTestimonials(){
+    e.preventDefault();
 
-        testimonialTrack.style.transform =
-            `translateX(-${index * 100}%)`;
+    emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
 
-    }
+        from_name:document.getElementById("name").value,
 
-    nextBtn.addEventListener("click",()=>{
+        company_name:document.getElementById("company").value,
 
-        index++;
+        from_email:document.getElementById("email").value,
 
-        if(index >= testimonialCards.length){
+        phone:document.getElementById("phone").value,
 
-            index = 0;
+        requirement:document.getElementById("message").value,
 
-        }
+        to_email:"axionindustrialsolutions@gmail.com"
 
-        updateTestimonials();
+    })
+
+    .then(function(){
+
+        popup.style.display="flex";
+
+        form.reset();
+
+    })
+
+    .catch(function(error){
+
+        alert("Enquiry could not be sent. Please try again.");
+
+        console.log(error);
 
     });
 
-    prevBtn.addEventListener("click",()=>{
+});
 
-        index--;
+popupClose.addEventListener("click",function(){
 
-        if(index < 0){
+    popup.style.display="none";
 
-            index = testimonialCards.length - 1;
-
-        }
-
-        updateTestimonials();
-
-    });
-
-    /* Auto Slide */
-
-    setInterval(()=>{
-
-        index++;
-
-        if(index >= testimonialCards.length){
-
-            index = 0;
-
-        }
-
-        updateTestimonials();
-
-    },5000);
-
-}
+});
