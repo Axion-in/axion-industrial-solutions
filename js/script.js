@@ -313,7 +313,7 @@ EMAILJS
 =========================================*/
 
 emailjs.init({
-    publicKey: "YOUR_PUBLIC_KEY"
+    publicKey: "MIK9Hv_NCKyaSw0Qf"
 });
 
 const form = document.getElementById("contactForm");
@@ -324,7 +324,7 @@ form.addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
+    emailjs.send("service_i5cs5t8", "template_3kr2trf", {
 
         from_name:document.getElementById("name").value,
 
