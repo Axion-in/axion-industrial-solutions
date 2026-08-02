@@ -327,30 +327,38 @@ if(contactForm){
         const submitBtn = contactForm.querySelector(".contact-btn");
 
         submitBtn.disabled = true;
-        submitBtn.innerHTML = "Sending...";
+
+        submitBtn.innerHTML =
+        '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
         emailjs.send(
+
             "service_i5cs5t8",
+
             "template_3kr2trf",
+
             {
 
-                from_name: document.getElementById("name").value,
+                from_name:
+                document.getElementById("name").value,
 
-                company: document.getElementById("company").value,
+                company:
+                document.getElementById("company").value,
 
-                from_email: document.getElementById("email").value,
+                from_email:
+                document.getElementById("email").value,
 
-                phone: document.getElementById("phone").value,
+                phone:
+                document.getElementById("phone").value,
 
-                message: document.getElementById("message").value
+                message:
+                document.getElementById("message").value
 
             }
 
         )
 
         .then(function(){
-
-            alert("✅ Thank you! Your enquiry has been submitted successfully.");
 
             contactForm.reset();
 
@@ -359,18 +367,20 @@ if(contactForm){
             submitBtn.innerHTML =
             '<i class="fas fa-paper-plane"></i> SEND ENQUIRY';
 
+            // Success Popup namma later add pannuvom
+
         })
 
         .catch(function(error){
 
-            console.log(error);
-
-            alert("❌ Failed to send enquiry. Please try again.");
+            console.log("EmailJS Error :", error);
 
             submitBtn.disabled = false;
 
             submitBtn.innerHTML =
             '<i class="fas fa-paper-plane"></i> SEND ENQUIRY';
+
+            alert("Something went wrong. Please try again.");
 
         });
 
