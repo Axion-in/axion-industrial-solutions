@@ -391,27 +391,3 @@ submitBtn.innerHTML='<i class="fas fa-paper-plane"></i> SEND ENQUIRY';
 });
 
 }
-
-/*=========================================
-SUCCESS POPUP CLOSE
-=========================================*/
-
-if(popupClose){
-
-popupClose.addEventListener("click",function(){
-
-successPopup.classList.remove("show");
-
-});
-
-}
-
-window.addEventListener("click",function(e){
-
-if(e.target===successPopup){
-
-successPopup.classList.remove("show");
-
-}
-
-});
