@@ -3963,9 +3963,9 @@ CONTACT CARDS
 
     border-radius:14px;
 
-    padding:16px;
+    padding:12px 14px;
 
-    margin-bottom:14px;
+    margin-bottom:10px;
 
     transition:.3s;
 
@@ -4017,15 +4017,23 @@ CONTACT CARDS
 
 .contact-card a{
 
-    color:#111;
+    color:#fff;
 
     text-decoration:none;
 
-    font-size:16px;
-
-    line-height:1.7;
+    font-size:12px;
 
     font-weight:600;
+
+    line-height:1.5;
+
+    word-break:break-all;
+
+    overflow-wrap:break-word;
+
+    display:block;
+
+    max-width:100%;
 
 }
 
