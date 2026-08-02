@@ -309,71 +309,109 @@ window.addEventListener("scroll",()=>{
 });
 
 /*=========================================
-CONTACT FORM - EMAILJS
+EMAILJS INITIALIZE
 =========================================*/
 
 emailjs.init({
     publicKey: "MIK9Hv_NCKyaSw0Qf"
 });
 
+/*=========================================
+CONTACT FORM
+=========================================*/
+
 const contactForm = document.getElementById("contactForm");
+
+const successPopup = document.getElementById("successPopup");
+
+const popupClose = document.getElementById("popupClose");
 
 if(contactForm){
 
-    contactForm.addEventListener("submit", function(e){
+contactForm.addEventListener("submit",function(e){
 
-        e.preventDefault();
+e.preventDefault();
 
-        const submitBtn = contactForm.querySelector(".contact-btn");
+const submitBtn=document.querySelector(".contact-btn");
 
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = "Sending...";
+submitBtn.disabled=true;
 
-        emailjs.send(
-            "service_i5cs5t8",
-            "template_3kr2trf",
-            {
+submitBtn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-                from_name: document.getElementById("name").value,
+emailjs.send(
 
-                company: document.getElementById("company").value,
+"service_i5cs5t8",
 
-                from_email: document.getElementById("email").value,
+"template_3kr2trf",
 
-                phone: document.getElementById("phone").value,
+{
 
-                message: document.getElementById("message").value
+from_name:document.getElementById("name").value,
 
-            }
+company:document.getElementById("company").value,
 
-        )
+from_email:document.getElementById("email").value,
 
-        .then(function(){
+phone:document.getElementById("phone").value,
 
-            alert("✅ Thank you! Your enquiry has been submitted successfully.");
-
-            contactForm.reset();
-
-            submitBtn.disabled = false;
-
-            submitBtn.innerHTML =
-            '<i class="fas fa-paper-plane"></i> SEND ENQUIRY';
-
-        })
-
-        .catch(function(error){
-
-            console.log(error);
-
-            alert("❌ Failed to send enquiry. Please try again.");
-
-            submitBtn.disabled = false;
-
-            submitBtn.innerHTML =
-            '<i class="fas fa-paper-plane"></i> SEND ENQUIRY';
-
-        });
-
-    });
+message:document.getElementById("message").value
 
 }
+
+)
+
+.then(function(){
+
+contactForm.reset();
+
+submitBtn.disabled=false;
+
+submitBtn.innerHTML='<i class="fas fa-paper-plane"></i> SEND ENQUIRY';
+
+if(successPopup){
+
+successPopup.classList.add("show");
+
+}
+
+})
+
+.catch(function(error){
+
+console.log(error);
+
+alert("Unable to send enquiry. Please try again.");
+
+submitBtn.disabled=false;
+
+submitBtn.innerHTML='<i class="fas fa-paper-plane"></i> SEND ENQUIRY';
+
+});
+
+});
+
+}
+
+/*=========================================
+SUCCESS POPUP CLOSE
+=========================================*/
+
+if(popupClose){
+
+popupClose.addEventListener("click",function(){
+
+successPopup.classList.remove("show");
+
+});
+
+}
+
+window.addEventListener("click",function(e){
+
+if(e.target===successPopup){
+
+successPopup.classList.remove("show");
+
+}
+
+});
