@@ -3953,8 +3953,8 @@ CONTACT CARDS
 
     display:flex;
 
-    align-items:center;
-
+    align-items:flex-start;
+   
     gap:16px;
 
     background:rgba(255,255,255,.14);
@@ -3981,11 +3981,11 @@ CONTACT CARDS
 
 .contact-icon{
 
-    width:58px;
+    width:52px;
 
-    height:58px;
+    height:52px;
 
-    min-width:58px;
+    min-width:52px;
 
     border-radius:50%;
 
@@ -3995,11 +3995,21 @@ CONTACT CARDS
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
 
-    font-size:22px;
+    align-items:center;
+
+    font-size:20px;
+
+    margin-top:2px;
+
+}
+
+.contact-info{
+
+    flex:1;
+
+    min-width:0;
 
 }
 
@@ -4027,13 +4037,15 @@ CONTACT CARDS
 
     font-weight:600;
 
-    line-height:1.6;
+    line-height:1.5;
 
     margin-bottom:4px;
 
-    word-break:break-all;
+    white-space:nowrap;
 
-    overflow-wrap:anywhere;
+    overflow:hidden;
+
+    text-overflow:ellipsis;
 
 }
 
