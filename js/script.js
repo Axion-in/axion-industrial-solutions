@@ -307,3 +307,41 @@ window.addEventListener("scroll",()=>{
     });
 
 });
+
+/*=========================================
+AXION CONTACT FORM
+(No Conflict Version)
+=========================================*/
+
+const axContactForm = document.getElementById("axContactForm");
+
+if (axContactForm) {
+
+    axContactForm.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const submitBtn = this.querySelector(".ax-contact-btn");
+
+        const oldText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML =
+        '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+        /* Temporary Success */
+
+        setTimeout(function(){
+
+            alert("✅ Thank You!\n\nYour enquiry has been submitted successfully.\nOur team will contact you shortly.");
+
+            axContactForm.reset();
+
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = oldText;
+
+        },1200);
+
+    });
+
+}
