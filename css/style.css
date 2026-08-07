@@ -3922,8 +3922,9 @@ RIGHT HEADINGS
 }
 
 /*==================================================
-AXION CONTACT FORM
+AXION PREMIUM CONTACT SECTION
 PART 2
+FORM + CONTACT CARDS
 ==================================================*/
 
 /*==============================
@@ -3940,10 +3941,6 @@ FORM
 
 }
 
-/*==============================
-INPUT GROUP
-==============================*/
-
 .ax-input-group{
 
     margin-bottom:16px;
@@ -3957,17 +3954,17 @@ INPUT GROUP
 
     padding:15px 18px;
 
-    border:1px solid #d8e3ef;
+    border:1px solid #d9e4f2;
 
     border-radius:10px;
 
     background:#fff;
 
-    outline:none;
-
     font-size:15px;
 
     font-family:'Poppins',sans-serif;
+
+    outline:none;
 
     transition:.35s;
 
@@ -3986,12 +3983,12 @@ INPUT GROUP
 
     resize:none;
 
-    min-height:120px;
+    min-height:130px;
 
 }
 
 /*==============================
-BUTTON
+SUBMIT BUTTON
 ==============================*/
 
 .ax-contact-btn{
@@ -3999,6 +3996,8 @@ BUTTON
     width:100%;
 
     height:56px;
+
+    margin-top:auto;
 
     border:none;
 
@@ -4016,7 +4015,13 @@ BUTTON
 
     transition:.35s;
 
-    margin-top:auto;
+}
+
+.ax-contact-btn:hover{
+
+    background:#004fc2;
+
+    transform:translateY(-2px);
 
 }
 
@@ -4026,18 +4031,8 @@ BUTTON
 
 }
 
-.ax-contact-btn:hover{
-
-    background:#004fc2;
-
-    transform:translateY(-2px);
-
-    box-shadow:0 10px 25px rgba(13,110,253,.30);
-
-}
-
 /*==============================
-CONTACT CARD
+CONTACT CARDS
 ==============================*/
 
 .ax-contact-card{
@@ -4046,17 +4041,17 @@ CONTACT CARD
 
     align-items:flex-start;
 
-    gap:15px;
+    gap:14px;
+
+    padding:15px;
+
+    margin-bottom:12px;
 
     background:rgba(255,255,255,.12);
 
     border:1px solid rgba(255,255,255,.18);
 
     border-radius:14px;
-
-    padding:15px;
-
-    margin-bottom:14px;
 
     transition:.35s;
 
@@ -4066,7 +4061,7 @@ CONTACT CARD
 
     background:rgba(255,255,255,.18);
 
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 
 }
 
@@ -4121,5 +4116,390 @@ CONTACT INFO
     font-weight:700;
 
     margin-bottom:6px;
+
+}
+
+/*==============================
+EMAIL / PHONE
+==============================*/
+
+.ax-contact-info a{
+
+    display:block;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+    margin-bottom:4px;
+
+    overflow-wrap:anywhere;
+
+    word-break:break-word;
+
+}
+
+.ax-contact-info a:hover{
+
+    text-decoration:underline;
+
+}
+
+/*==============================
+ADDRESS / OFFICE TIME
+==============================*/
+
+.ax-contact-info p{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+}
+
+.ax-contact-card:last-child{
+
+    margin-bottom:0;
+
+}
+
+/*==================================================
+AXION PREMIUM CONTACT SECTION
+PART 3
+RESPONSIVE
+==================================================*/
+
+/*==============================
+LAPTOP
+==============================*/
+
+@media (max-width:1200px){
+
+.ax-contact-container{
+
+grid-template-columns:58% 42%;
+
+gap:22px;
+
+}
+
+.ax-contact-left,
+.ax-contact-right{
+
+padding:30px;
+
+min-height:680px;
+
+}
+
+.ax-contact-tag,
+.ax-contact-title{
+
+font-size:34px;
+
+}
+
+.ax-contact-left h2{
+
+font-size:42px;
+
+}
+
+.ax-contact-right h2{
+
+font-size:26px;
+
+}
+
+}
+
+/*==============================
+TABLET
+==============================*/
+
+@media (max-width:992px){
+
+.ax-contact-section{
+
+padding:70px 20px;
+
+}
+
+.ax-contact-container{
+
+grid-template-columns:1fr;
+
+gap:25px;
+
+}
+
+.ax-contact-left,
+.ax-contact-right{
+
+min-height:auto;
+
+padding:28px;
+
+}
+
+.ax-contact-tag,
+.ax-contact-title{
+
+font-size:30px;
+
+}
+
+.ax-contact-left h2{
+
+font-size:36px;
+
+}
+
+.ax-contact-right h2{
+
+font-size:24px;
+
+}
+
+.ax-contact-left p,
+.ax-contact-right>p{
+
+font-size:15px;
+
+}
+
+.ax-contact-card{
+
+padding:14px;
+
+}
+
+.ax-contact-info h4{
+
+font-size:17px;
+
+}
+
+.ax-contact-info a,
+.ax-contact-info p{
+
+font-size:13px;
+
+}
+
+}
+
+/*==============================
+MOBILE
+==============================*/
+
+@media (max-width:768px){
+
+.ax-contact-section{
+
+padding:60px 15px;
+
+}
+
+.ax-contact-left,
+.ax-contact-right{
+
+padding:22px;
+
+border-radius:18px;
+
+}
+
+.ax-contact-tag,
+.ax-contact-title{
+
+font-size:26px;
+
+}
+
+.ax-contact-left h2{
+
+font-size:30px;
+
+}
+
+.ax-contact-right h2{
+
+font-size:22px;
+
+}
+
+.ax-contact-left p,
+.ax-contact-right>p{
+
+font-size:14px;
+
+line-height:1.7;
+
+}
+
+.ax-input-group input,
+.ax-input-group textarea{
+
+padding:14px;
+
+font-size:14px;
+
+}
+
+.ax-contact-btn{
+
+height:50px;
+
+font-size:15px;
+
+}
+
+.ax-contact-card{
+
+padding:12px;
+
+gap:12px;
+
+}
+
+.ax-contact-icon{
+
+width:46px;
+
+height:46px;
+
+min-width:46px;
+
+font-size:18px;
+
+}
+
+.ax-contact-info h4{
+
+font-size:15px;
+
+}
+
+.ax-contact-info a{
+
+font-size:12px;
+
+white-space:normal;
+
+word-break:break-word;
+
+}
+
+.ax-contact-info p{
+
+font-size:12px;
+
+}
+
+}
+
+/*==============================
+SMALL MOBILE
+==============================*/
+
+@media (max-width:480px){
+
+.ax-contact-left,
+.ax-contact-right{
+
+padding:18px;
+
+}
+
+.ax-contact-tag,
+.ax-contact-title{
+
+font-size:22px;
+
+}
+
+.ax-contact-left h2{
+
+font-size:24px;
+
+}
+
+.ax-contact-right h2{
+
+font-size:20px;
+
+}
+
+.ax-contact-card{
+
+flex-direction:row;
+
+align-items:flex-start;
+
+}
+
+.ax-contact-icon{
+
+width:42px;
+
+height:42px;
+
+min-width:42px;
+
+font-size:16px;
+
+}
+
+}
+
+/*==============================
+PREMIUM EFFECTS
+==============================*/
+
+.ax-contact-left,
+.ax-contact-right{
+
+animation:axFadeUp .8s ease;
+
+overflow:hidden;
+
+}
+
+@keyframes axFadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.ax-contact-btn:disabled{
+
+opacity:.8;
+
+cursor:not-allowed;
 
 }
