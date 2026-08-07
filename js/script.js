@@ -309,15 +309,20 @@ window.addEventListener("scroll",()=>{
 });
 
 /*=========================================
-AXION CONTACT FORM
-(No Conflict Version)
+AXION CONTACT FORM EMAILJS
 =========================================*/
+
+(function () {
+    emailjs.init({
+        publicKey: "MIK9Hv_NCKyaSw0Qf"
+    });
+})();
 
 const axContactForm = document.getElementById("axContactForm");
 
 if (axContactForm) {
 
-    axContactForm.addEventListener("submit", function(e){
+    axContactForm.addEventListener("submit", function (e) {
 
         e.preventDefault();
 
@@ -326,21 +331,57 @@ if (axContactForm) {
         const oldText = submitBtn.innerHTML;
 
         submitBtn.disabled = true;
+
         submitBtn.innerHTML =
         '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-        /* Temporary Success */
+        const templateParams = {
 
-        setTimeout(function(){
+            from_name: document.getElementById("axName").value,
 
-            alert("✅ Thank You!\n\nYour enquiry has been submitted successfully.\nOur team will contact you shortly.");
+            company_name: document.getElementById("axCompany").value,
+
+            from_email: document.getElementById("axEmail").value,
+
+            phone: document.getElementById("axPhone").value,
+
+            requirement: document.getElementById("axMessage").value
+
+        };
+
+        emailjs.send(
+
+            "service_i5cs5t8",
+
+            "template_3kr2trf",
+
+            templateParams
+
+        )
+
+        .then(function () {
+
+            alert("✅ Thank You!\n\nYour enquiry has been sent successfully.\nOur team will contact you shortly.");
 
             axContactForm.reset();
 
             submitBtn.disabled = false;
+
             submitBtn.innerHTML = oldText;
 
-        },1200);
+        })
+
+        .catch(function (error) {
+
+            console.log(error);
+
+            alert("❌ Failed to send enquiry.\nPlease try again.");
+
+            submitBtn.disabled = false;
+
+            submitBtn.innerHTML = oldText;
+
+        });
 
     });
 
