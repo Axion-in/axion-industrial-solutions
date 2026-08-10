@@ -29,12 +29,13 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{
 /* ==========================================
    AXION INDUSTRIAL SOLUTIONS
    POPUP SECTION
-   ========================================== */
+   EMAILJS + 3 MINUTE REPEAT
+========================================== */
 
 
 /* ==========================================
    EMAILJS INITIALIZATION
-   ========================================== */
+========================================== */
 
 if (typeof emailjs !== "undefined") {
 
@@ -46,36 +47,56 @@ if (typeof emailjs !== "undefined") {
 
 
 /* ==========================================
-   POPUP OPEN
-   ========================================== */
+   POPUP SYSTEM
+========================================== */
 
-window.addEventListener("load", function () {
+(function () {
 
-    const axPopup = document.getElementById("popup");
+    let axPopupTimer = null;
 
-    if (axPopup) {
+    const AX_POPUP_INTERVAL = 3 * 60 * 1000; // 3 minutes
 
-        setTimeout(function () {
+
+    /* ======================================
+       OPEN POPUP
+    ====================================== */
+
+    function axOpenPopup() {
+
+        const axPopup =
+            document.getElementById("popup");
+
+        if (axPopup) {
 
             axPopup.style.display = "flex";
 
-        }, 1000);
+        }
 
     }
 
-});
+
+    /* ======================================
+       START 3 MINUTE TIMER
+    ====================================== */
+
+    function axStartPopupTimer() {
+
+        clearTimeout(axPopupTimer);
+
+        axPopupTimer = setTimeout(function () {
+
+            axOpenPopup();
+
+        }, AX_POPUP_INTERVAL);
+
+    }
 
 
-/* ==========================================
-   POPUP CLOSE BUTTON
-   ========================================== */
+    /* ======================================
+       CLOSE POPUP
+    ====================================== */
 
-const axPopupClose =
-    document.querySelector(".close-btn");
-
-if (axPopupClose) {
-
-    axPopupClose.addEventListener("click", function () {
+    function axClosePopup() {
 
         const axPopup =
             document.getElementById("popup");
@@ -86,258 +107,317 @@ if (axPopupClose) {
 
         }
 
-    });
+        /*
+         * Popup closed.
+         * Start 3 minute countdown.
+         */
 
-}
+        axStartPopupTimer();
 
-
-/* ==========================================
-   CLOSE POPUP BY CLICKING OUTSIDE
-   ========================================== */
-
-const axPopupOverlay =
-    document.getElementById("popup");
-
-if (axPopupOverlay) {
-
-    axPopupOverlay.addEventListener("click", function (e) {
-
-        if (e.target === axPopupOverlay) {
-
-            axPopupOverlay.style.display = "none";
-
-        }
-
-    });
-
-}
+    }
 
 
-/* ==========================================
-   POPUP FORM
-   EMAILJS SUBMISSION
-   ========================================== */
+    /* ======================================
+       PAGE LOAD
+       FIRST POPUP AFTER 1 SECOND
+    ====================================== */
 
-const axPopupForm =
-    document.getElementById("popupForm");
+    window.addEventListener("load", function () {
 
-if (axPopupForm) {
+        const axPopup =
+            document.getElementById("popup");
 
-    axPopupForm.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-
-        /* ======================================
-           SUBMIT BUTTON
-        ====================================== */
-
-        const axSubmitButton =
-            axPopupForm.querySelector(
-                'button[type="submit"]'
-            );
-
-        const axOriginalButtonText =
-            axSubmitButton
-                ? axSubmitButton.innerHTML
-                : "Submit Enquiry";
-
-
-        /* ======================================
-           GET FORM FIELDS
-        ====================================== */
-
-        const axName =
-            document.getElementById("popupName");
-
-        const axCompany =
-            document.getElementById("popupCompany");
-
-        const axPhone =
-            document.getElementById("popupPhone");
-
-        const axEmail =
-            document.getElementById("popupEmail");
-
-        const axRequirement =
-            document.getElementById("popupMessage");
-
-
-        /* ======================================
-           FORM DATA
-        ====================================== */
-
-        const axPopupData = {
-
-            from_name:
-                axName
-                    ? axName.value.trim()
-                    : "",
-
-            company_name:
-                axCompany
-                    ? axCompany.value.trim()
-                    : "",
-
-            phone:
-                axPhone
-                    ? axPhone.value.trim()
-                    : "",
-
-            from_email:
-                axEmail
-                    ? axEmail.value.trim()
-                    : "",
-
-            requirement:
-                axRequirement
-                    ? axRequirement.value.trim()
-                    : ""
-
-        };
-
-
-        /* ======================================
-           BUTTON LOADING
-        ====================================== */
-
-        if (axSubmitButton) {
-
-            axSubmitButton.disabled = true;
-
-            axSubmitButton.innerHTML =
-                '<i class="fas fa-spinner fa-spin"></i> Sending...';
-
-        }
-
-
-        /* ======================================
-           CHECK EMAILJS
-        ====================================== */
-
-        if (typeof emailjs === "undefined") {
-
-            alert(
-                "❌ Email service is not available.\n\nPlease try again."
-            );
-
-
-            if (axSubmitButton) {
-
-                axSubmitButton.disabled = false;
-
-                axSubmitButton.innerHTML =
-                    axOriginalButtonText;
-
-            }
-
+        if (!axPopup) {
             return;
-
         }
 
+        setTimeout(function () {
 
-        /* ======================================
-           SEND POPUP ENQUIRY
-        ====================================== */
+            axOpenPopup();
 
-        emailjs.send(
-
-            "service_i5cs5t8",
-
-            "template_3kr2trf",
-
-            axPopupData
-
-        )
-
-        .then(function () {
-
-
-            /* ==================================
-               SUCCESS
-            ================================== */
-
-            alert(
-                "✅ Thank You!\n\n" +
-                "Your enquiry has been submitted successfully.\n\n" +
-                "Our team will contact you shortly."
-            );
-
-
-            /* ==================================
-               RESET FORM
-            ================================== */
-
-            axPopupForm.reset();
-
-
-            /* ==================================
-               CLOSE POPUP
-            ================================== */
-
-            const axPopup =
-                document.getElementById("popup");
-
-            if (axPopup) {
-
-                axPopup.style.display = "none";
-
-            }
-
-
-            /* ==================================
-               RESTORE BUTTON
-            ================================== */
-
-            if (axSubmitButton) {
-
-                axSubmitButton.disabled = false;
-
-                axSubmitButton.innerHTML =
-                    axOriginalButtonText;
-
-            }
-
-        })
-
-
-        .catch(function (error) {
-
-
-            /* ==================================
-               ERROR
-            ================================== */
-
-            console.error(
-                "Popup EmailJS Error:",
-                error
-            );
-
-
-            alert(
-                "❌ Unable to send your enquiry.\n\n" +
-                "Please try again."
-            );
-
-
-            /* ==================================
-               RESTORE BUTTON
-            ================================== */
-
-            if (axSubmitButton) {
-
-                axSubmitButton.disabled = false;
-
-                axSubmitButton.innerHTML =
-                    axOriginalButtonText;
-
-            }
-
-        });
+        }, 1000);
 
     });
 
-}
+
+    /* ======================================
+       CLOSE BUTTON
+    ====================================== */
+
+    document.addEventListener("click", function (e) {
+
+        const axCloseButton =
+            e.target.closest("#popup .close-btn");
+
+        if (axCloseButton) {
+
+            e.preventDefault();
+
+            axClosePopup();
+
+        }
+
+    });
+
+
+    /* ======================================
+       CLOSE BY CLICKING OUTSIDE POPUP BOX
+    ====================================== */
+
+    document.addEventListener("click", function (e) {
+
+        const axPopup =
+            document.getElementById("popup");
+
+        if (!axPopup) {
+            return;
+        }
+
+        /*
+         * Only close when the actual
+         * overlay is clicked.
+         */
+
+        if (e.target === axPopup) {
+
+            axClosePopup();
+
+        }
+
+    });
+
+
+    /* ======================================
+       POPUP FORM
+       EMAILJS SUBMISSION
+    ====================================== */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const axPopupForm =
+            document.getElementById("popupForm");
+
+        if (!axPopupForm) {
+            return;
+        }
+
+
+        axPopupForm.addEventListener(
+            "submit",
+            function (e) {
+
+                e.preventDefault();
+
+
+                /* ==============================
+                   SUBMIT BUTTON
+                ============================== */
+
+                const axSubmitButton =
+                    axPopupForm.querySelector(
+                        'button[type="submit"]'
+                    );
+
+
+                const axOriginalButtonText =
+                    axSubmitButton
+                        ? axSubmitButton.innerHTML
+                        : "Submit Enquiry";
+
+
+                /* ==============================
+                   FORM FIELDS
+                ============================== */
+
+                const axName =
+                    document.getElementById("popupName");
+
+                const axCompany =
+                    document.getElementById("popupCompany");
+
+                const axPhone =
+                    document.getElementById("popupPhone");
+
+                const axEmail =
+                    document.getElementById("popupEmail");
+
+                const axRequirement =
+                    document.getElementById("popupMessage");
+
+
+                /* ==============================
+                   FORM DATA
+                ============================== */
+
+                const axPopupData = {
+
+                    from_name:
+                        axName
+                            ? axName.value.trim()
+                            : "",
+
+                    company_name:
+                        axCompany
+                            ? axCompany.value.trim()
+                            : "",
+
+                    phone:
+                        axPhone
+                            ? axPhone.value.trim()
+                            : "",
+
+                    from_email:
+                        axEmail
+                            ? axEmail.value.trim()
+                            : "",
+
+                    requirement:
+                        axRequirement
+                            ? axRequirement.value.trim()
+                            : ""
+
+                };
+
+
+                /* ==============================
+                   BUTTON LOADING
+                ============================== */
+
+                if (axSubmitButton) {
+
+                    axSubmitButton.disabled = true;
+
+                    axSubmitButton.innerHTML =
+                        '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                }
+
+
+                /* ==============================
+                   CHECK EMAILJS
+                ============================== */
+
+                if (
+                    typeof emailjs === "undefined"
+                ) {
+
+                    alert(
+                        "❌ Email service is not available.\n\n" +
+                        "Please try again."
+                    );
+
+
+                    if (axSubmitButton) {
+
+                        axSubmitButton.disabled = false;
+
+                        axSubmitButton.innerHTML =
+                            axOriginalButtonText;
+
+                    }
+
+                    return;
+
+                }
+
+
+                /* ==============================
+                   SEND POPUP ENQUIRY
+                ============================== */
+
+                emailjs.send(
+
+                    "service_i5cs5t8",
+
+                    "template_3kr2trf",
+
+                    axPopupData
+
+                )
+
+
+                /* ==============================
+                   SUCCESS
+                ============================== */
+
+                .then(function () {
+
+                    alert(
+                        "✅ Thank You!\n\n" +
+                        "Your enquiry has been submitted successfully.\n\n" +
+                        "Our team will contact you shortly."
+                    );
+
+
+                    /* ==========================
+                       RESET FORM
+                    ========================== */
+
+                    axPopupForm.reset();
+
+
+                    /* ==========================
+                       CLOSE POPUP
+                    ========================== */
+
+                    axClosePopup();
+
+
+                    /* ==========================
+                       RESTORE BUTTON
+                    ========================== */
+
+                    if (axSubmitButton) {
+
+                        axSubmitButton.disabled = false;
+
+                        axSubmitButton.innerHTML =
+                            axOriginalButtonText;
+
+                    }
+
+                })
+
+
+                /* ==============================
+                   ERROR
+                ============================== */
+
+                .catch(function (error) {
+
+                    console.error(
+                        "Popup EmailJS Error:",
+                        error
+                    );
+
+
+                    alert(
+                        "❌ Unable to send your enquiry.\n\n" +
+                        "Please try again."
+                    );
+
+
+                    /* ==========================
+                       RESTORE BUTTON
+                    ========================== */
+
+                    if (axSubmitButton) {
+
+                        axSubmitButton.disabled = false;
+
+                        axSubmitButton.innerHTML =
+                            axOriginalButtonText;
+
+                    }
+
+                });
+
+            }
+        );
+
+    });
+
+})();
 
 /* ==========================================
    MOBILE MENU
