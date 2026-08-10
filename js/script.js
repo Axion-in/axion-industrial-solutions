@@ -826,3 +826,40 @@ if (axContactForm) {
     );
 
 }
+
+/* ==========================================
+   CTA - GET A QUOTE
+   ISOLATED SCRIPT
+========================================== */
+
+(function () {
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const quoteButton = document.getElementById("ctaGetQuote");
+
+        if (!quoteButton) {
+            return;
+        }
+
+        quoteButton.addEventListener("click", function (event) {
+
+            const contactSection =
+                document.getElementById("contact");
+
+            if (!contactSection) {
+                return;
+            }
+
+            event.preventDefault();
+
+            contactSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+    });
+
+})();
