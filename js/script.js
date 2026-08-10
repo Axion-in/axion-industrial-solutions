@@ -828,7 +828,7 @@ if (axContactForm) {
 }
 
 /* ==========================================
-   CTA - GET A QUOTE
+   AXION CTA - GET A QUOTE
    ISOLATED SCRIPT
 ========================================== */
 
@@ -836,7 +836,8 @@ if (axContactForm) {
 
     document.addEventListener("DOMContentLoaded", function () {
 
-        const quoteButton = document.getElementById("ctaGetQuote");
+        const quoteButton =
+            document.getElementById("ctaGetQuote");
 
         if (!quoteButton) {
             return;
@@ -845,7 +846,7 @@ if (axContactForm) {
         quoteButton.addEventListener("click", function (event) {
 
             const contactSection =
-                document.getElementById("contact");
+                document.getElementById("ax-contact");
 
             if (!contactSection) {
                 return;
