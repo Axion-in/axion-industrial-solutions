@@ -1457,70 +1457,6 @@ z-index:99999;
 
 }
 
-.popup-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:6px;
-
-    margin-top:6px;
-
-}
-
-.popup-buttons a{
-
-    width:120px;
-
-    height:42px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border-radius:8px;
-
-    font-size:14px;
-
-    font-weight:600;
-
-}
-
-.call-btn,
-
-.whatsapp-btn{
-
-    flex:1;
-
-    text-align:center;
-
-    text-decoration:none;
-
-    padding:12px;
-
-    border-radius:8px;
-
-    color:#fff;
-
-    font-weight:600;
-
-}
-
-.call-btn{
-
-    background:#0077ff;
-
-}
-
-.whatsapp-btn{
-
-    background:#25D366;
-
-}
-
 .popup-safe{
 
     text-align:center;
@@ -1610,12 +1546,6 @@ nav{
 .popup-box h2{
 
     font-size:20px;
-
-}
-
-.popup-buttons{
-
-    flex-direction:row;
 
 }
 
