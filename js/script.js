@@ -525,27 +525,73 @@ item.classList.add("show");
 
 });
 
-/*=========================================
-CTA SCROLL ANIMATION
-=========================================*/
+/* ==========================================
+   AXION INDUSTRIAL SOLUTIONS
+   CTA SECTION
+   Get a Quote Button
+========================================== */
 
-const ctaItems = document.querySelectorAll(
-'.cta-left,.cta-right'
-);
+document.addEventListener("DOMContentLoaded", function () {
 
-window.addEventListener("scroll",()=>{
+    /* ==============================
+       CTA GET A QUOTE BUTTON
+    ============================== */
 
-    ctaItems.forEach(item=>{
+    const ctaQuoteBtn = document.querySelector(
+        ".cta-container .cta-btn.quote-btn"
+    );
 
-        const top = item.getBoundingClientRect().top;
+    if (ctaQuoteBtn) {
 
-        if(top < window.innerHeight - 80){
+        ctaQuoteBtn.addEventListener("click", function (e) {
 
-            item.classList.add("show");
+            const contactSection = document.getElementById("contact");
 
-        }
+            if (contactSection) {
 
-    });
+                e.preventDefault();
+
+                contactSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        });
+
+    }
+
+
+    /* ==============================
+       CTA SCROLL ANIMATION
+    ============================== */
+
+    const ctaItems = document.querySelectorAll(
+        ".cta-container .cta-left, " +
+        ".cta-container .cta-right"
+    );
+
+    function revealCTA() {
+
+        ctaItems.forEach(function (item) {
+
+            const itemTop = item.getBoundingClientRect().top;
+
+            if (itemTop < window.innerHeight - 80) {
+
+                item.classList.add("show");
+
+            }
+
+        });
+
+    }
+
+    window.addEventListener("scroll", revealCTA);
+
+    /* Run once when page loads */
+    revealCTA();
 
 });
 
