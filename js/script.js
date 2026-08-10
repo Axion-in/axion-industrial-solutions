@@ -944,3 +944,94 @@ if (axContactForm) {
     });
 
 })();
+
+/* =====================================================
+   AXION COMPANY PROFILE
+   ISOLATED JAVASCRIPT
+   ===================================================== */
+
+(function () {
+
+    "use strict";
+
+    const profileSection =
+        document.querySelector(".ax-profile-section");
+
+    if (!profileSection) {
+        return;
+    }
+
+
+    /* ================================================
+       SCROLL REVEAL
+       ================================================ */
+
+    function showProfile() {
+
+        const sectionTop =
+            profileSection.getBoundingClientRect().top;
+
+        if (
+            sectionTop <
+            window.innerHeight - 100
+        ) {
+
+            profileSection.classList.add(
+                "ax-profile-visible"
+            );
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        showProfile,
+        { passive: true }
+    );
+
+
+    /* ================================================
+       INITIAL CHECK
+       ================================================ */
+
+    showProfile();
+
+
+    /* ================================================
+       PROFILE BUTTON
+       ================================================ */
+
+    const profileButton =
+        profileSection.querySelector(
+            ".ax-profile-btn"
+        );
+
+    if (profileButton) {
+
+        profileButton.addEventListener(
+            "click",
+            function (e) {
+
+                const target =
+                    document.querySelector("#contact") ||
+                    document.querySelector("#ax-contact");
+
+                if (target) {
+
+                    e.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+    }
+
+})();
