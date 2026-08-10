@@ -26,77 +26,295 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{
 
 });
 
-
 /* ==========================================
-   POPUP
+POPUP
 ========================================== */
 
-window.onload=function(){
+/*------------------------------------------
+EMAILJS INITIALIZATION
+------------------------------------------*/
 
-    const popup=document.getElementById("popup");
+if (typeof emailjs !== "undefined") {
 
-    if(popup){
-
-        setTimeout(function(){
-
-            popup.style.display="flex";
-
-        },1000);
-
-    }
+    emailjs.init({
+        publicKey: "MIK9Hv_NCKyaSw0Qf"
+    });
 
 }
 
 
-const popupClose=document.querySelector(".close-btn");
+/*------------------------------------------
+POPUP OPEN
+------------------------------------------*/
 
-if(popupClose){
+window.addEventListener("load", function () {
 
-    popupClose.onclick=function(){
+    const axPopup = document.getElementById("popup");
 
-        document.getElementById("popup").style.display="none";
+    if (axPopup) {
 
-    }
+        setTimeout(function () {
 
-}
+            axPopup.style.display = "flex";
 
-
-const popup=document.getElementById("popup");
-
-if(popup){
-
-    popup.onclick=function(e){
-
-        if(e.target===popup){
-
-            popup.style.display="none";
-
-        }
+        }, 1000);
 
     }
-
-}
-
-
-const popupForm=document.getElementById("popupForm");
-
-if(popupForm){
-
-popupForm.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-alert("✅ Thank you! Our team will contact you shortly.");
-
-this.reset();
-
-document.getElementById("popup").style.display="none";
 
 });
 
+
+/*------------------------------------------
+POPUP CLOSE BUTTON
+------------------------------------------*/
+
+const axPopupClose = document.querySelector(".close-btn");
+
+if (axPopupClose) {
+
+    axPopupClose.addEventListener("click", function () {
+
+        const axPopup = document.getElementById("popup");
+
+        if (axPopup) {
+
+            axPopup.style.display = "none";
+
+        }
+
+    });
+
 }
 
 
+/*------------------------------------------
+CLOSE POPUP WHEN CLICKING OUTSIDE
+------------------------------------------*/
+
+const axPopupOverlay = document.getElementById("popup");
+
+if (axPopupOverlay) {
+
+    axPopupOverlay.addEventListener("click", function (e) {
+
+        if (e.target === axPopupOverlay) {
+
+            axPopupOverlay.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/*------------------------------------------
+POPUP ENQUIRY FORM
+EMAILJS
+------------------------------------------*/
+
+const axPopupForm = document.getElementById("popupForm");
+
+if (axPopupForm) {
+
+    axPopupForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const axPopupButton =
+            axPopupForm.querySelector(
+                'button[type="submit"]'
+            );
+
+        const axOriginalButtonText =
+            axPopupButton
+                ? axPopupButton.innerHTML
+                : "Submit Enquiry";
+
+
+        /*----------------------------------
+        BUTTON LOADING
+        ----------------------------------*/
+
+        if (axPopupButton) {
+
+            axPopupButton.disabled = true;
+
+            axPopupButton.innerHTML =
+                '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+        }
+
+
+        /*----------------------------------
+        GET POPUP FORM VALUES
+        ----------------------------------*/
+
+        const axPopupName =
+            document.getElementById("popupName");
+
+        const axPopupPhone =
+            document.getElementById("popupPhone");
+
+        const axPopupEmail =
+            document.getElementById("popupEmail");
+
+        const axPopupMessage =
+            document.getElementById("popupMessage");
+
+
+        /*----------------------------------
+        EMAILJS DATA
+        ----------------------------------*/
+
+        const axPopupData = {
+
+            from_name:
+                axPopupName
+                    ? axPopupName.value
+                    : "",
+
+            phone:
+                axPopupPhone
+                    ? axPopupPhone.value
+                    : "",
+
+            from_email:
+                axPopupEmail
+                    ? axPopupEmail.value
+                    : "",
+
+            requirement:
+                axPopupMessage
+                    ? axPopupMessage.value
+                    : ""
+
+        };
+
+
+        /*----------------------------------
+        SEND EMAIL
+        ----------------------------------*/
+
+        if (
+            typeof emailjs === "undefined"
+        ) {
+
+            alert(
+                "❌ Email service is not available. Please try again."
+            );
+
+            if (axPopupButton) {
+
+                axPopupButton.disabled = false;
+
+                axPopupButton.innerHTML =
+                    axOriginalButtonText;
+
+            }
+
+            return;
+
+        }
+
+
+        emailjs.send(
+
+            "service_i5cs5t8",
+
+            "template_3kr2trf",
+
+            axPopupData
+
+        )
+
+        .then(function () {
+
+
+            /*------------------------------
+            SUCCESS
+            ------------------------------*/
+
+            alert(
+                "✅ Thank You!\n\n" +
+                "Your enquiry has been submitted successfully.\n\n" +
+                "Our team will contact you shortly."
+            );
+
+
+            /*------------------------------
+            RESET FORM
+            ------------------------------*/
+
+            axPopupForm.reset();
+
+
+            /*------------------------------
+            CLOSE POPUP
+            ------------------------------*/
+
+            const axPopup =
+                document.getElementById("popup");
+
+            if (axPopup) {
+
+                axPopup.style.display = "none";
+
+            }
+
+
+            /*------------------------------
+            RESTORE BUTTON
+            ------------------------------*/
+
+            if (axPopupButton) {
+
+                axPopupButton.disabled = false;
+
+                axPopupButton.innerHTML =
+                    axOriginalButtonText;
+
+            }
+
+        })
+
+        .catch(function (error) {
+
+
+            /*------------------------------
+            ERROR
+            ------------------------------*/
+
+            console.error(
+                "Popup EmailJS Error:",
+                error
+            );
+
+
+            alert(
+                "❌ Unable to send your enquiry.\n\n" +
+                "Please try again."
+            );
+
+
+            /*------------------------------
+            RESTORE BUTTON
+            ------------------------------*/
+
+            if (axPopupButton) {
+
+                axPopupButton.disabled = false;
+
+                axPopupButton.innerHTML =
+                    axOriginalButtonText;
+
+            }
+
+        });
+
+    });
+
+}
 
 /* ==========================================
    MOBILE MENU
