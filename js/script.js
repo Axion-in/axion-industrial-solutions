@@ -550,80 +550,233 @@ window.addEventListener("scroll",()=>{
 });
 
 /*=========================================
-AXION CONTACT FORM EMAILJS
+  AXION CONTACT SECTION
+  EMAILJS - NO CONFLICT VERSION
 =========================================*/
 
-(function () {
+
+/*=========================================
+  EMAILJS INITIALIZATION
+=========================================*/
+
+if (typeof emailjs !== "undefined") {
+
     emailjs.init({
         publicKey: "MIK9Hv_NCKyaSw0Qf"
     });
-})();
 
-const axContactForm = document.getElementById("axContactForm");
+}
+
+
+/*=========================================
+  CONTACT FORM
+=========================================*/
+
+const axContactForm =
+    document.getElementById("axContactForm");
+
 
 if (axContactForm) {
 
-    axContactForm.addEventListener("submit", function (e) {
+    axContactForm.addEventListener(
+        "submit",
+        function (e) {
 
-        e.preventDefault();
+            e.preventDefault();
 
-        const submitBtn = this.querySelector(".ax-contact-btn");
 
-        const oldText = submitBtn.innerHTML;
+            /*=================================
+              SUBMIT BUTTON
+            =================================*/
 
-        submitBtn.disabled = true;
+            const axContactButton =
+                axContactForm.querySelector(
+                    'button[type="submit"]'
+                );
 
-        submitBtn.innerHTML =
-        '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-        const templateParams = {
+            const axOriginalButtonText =
+                axContactButton
+                    ? axContactButton.innerHTML
+                    : "SEND ENQUIRY";
 
-            from_name: document.getElementById("axName").value,
 
-            company_name: document.getElementById("axCompany").value,
+            /*=================================
+              FORM FIELDS
+            =================================*/
 
-            from_email: document.getElementById("axEmail").value,
+            const axName =
+                document.getElementById("axName");
 
-            phone: document.getElementById("axPhone").value,
+            const axCompany =
+                document.getElementById("axCompany");
 
-            requirement: document.getElementById("axMessage").value
+            const axEmail =
+                document.getElementById("axEmail");
 
-        };
+            const axPhone =
+                document.getElementById("axPhone");
 
-        emailjs.send(
+            const axMessage =
+                document.getElementById("axMessage");
 
-            "service_i5cs5t8",
 
-            "template_3kr2trf",
+            /*=================================
+              FORM DATA
+            =================================*/
 
-            templateParams
+            const axContactData = {
 
-        )
+                from_name:
+                    axName
+                        ? axName.value.trim()
+                        : "",
 
-        .then(function () {
+                company_name:
+                    axCompany
+                        ? axCompany.value.trim()
+                        : "",
 
-            alert("✅ Thank You!\n\nYour enquiry has been sent successfully.\nOur team will contact you shortly.");
+                from_email:
+                    axEmail
+                        ? axEmail.value.trim()
+                        : "",
 
-            axContactForm.reset();
+                phone:
+                    axPhone
+                        ? axPhone.value.trim()
+                        : "",
 
-            submitBtn.disabled = false;
+                requirement:
+                    axMessage
+                        ? axMessage.value.trim()
+                        : ""
 
-            submitBtn.innerHTML = oldText;
+            };
 
-        })
 
-        .catch(function (error) {
+            /*=================================
+              BUTTON - SENDING
+            =================================*/
 
-            console.log(error);
+            if (axContactButton) {
 
-            alert("❌ Failed to send enquiry.\nPlease try again.");
+                axContactButton.disabled = true;
 
-            submitBtn.disabled = false;
+                axContactButton.innerHTML =
+                    '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-            submitBtn.innerHTML = oldText;
+            }
 
-        });
 
-    });
+            /*=================================
+              CHECK EMAILJS
+            =================================*/
+
+            if (
+                typeof emailjs === "undefined"
+            ) {
+
+                alert(
+                    "❌ Email service is not available.\n\nPlease try again."
+                );
+
+
+                if (axContactButton) {
+
+                    axContactButton.disabled = false;
+
+                    axContactButton.innerHTML =
+                        axOriginalButtonText;
+
+                }
+
+                return;
+
+            }
+
+
+            /*=================================
+              SEND CONTACT ENQUIRY
+            =================================*/
+
+            emailjs.send(
+
+                "service_i5cs5t8",
+
+                "template_3kr2trf",
+
+                axContactData
+
+            )
+
+
+            /*=================================
+              SUCCESS
+            =================================*/
+
+            .then(function () {
+
+                alert(
+                    "✅ Thank You!\n\n" +
+                    "Your enquiry has been submitted successfully.\n\n" +
+                    "Our team will contact you shortly."
+                );
+
+
+                /*-----------------------------
+                  RESET FORM
+                -----------------------------*/
+
+                axContactForm.reset();
+
+
+                /*-----------------------------
+                  RESTORE BUTTON
+                -----------------------------*/
+
+                if (axContactButton) {
+
+                    axContactButton.disabled = false;
+
+                    axContactButton.innerHTML =
+                        axOriginalButtonText;
+
+                }
+
+            })
+
+
+            /*=================================
+              ERROR
+            =================================*/
+
+            .catch(function (error) {
+
+                console.error(
+                    "Contact EmailJS Error:",
+                    error
+                );
+
+
+                alert(
+                    "❌ Unable to send your enquiry.\n\n" +
+                    "Please try again."
+                );
+
+
+                if (axContactButton) {
+
+                    axContactButton.disabled = false;
+
+                    axContactButton.innerHTML =
+                        axOriginalButtonText;
+
+                }
+
+            });
+
+        }
+    );
 
 }
