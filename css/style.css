@@ -1208,24 +1208,705 @@ MOBILE
 
 }
 
-/* ===========================
-FOOTER
-=========================== */
+/* =========================================================
+   AXION INDUSTRIAL SOLUTIONS
+   FINAL FOOTER / END SECTION
+   ISOLATED CSS
+   ========================================================= */
 
-footer{
-    background:#081a2c;
-    color:#fff;
-    text-align:center;
-    padding:35px 20px;
+.axion-end-footer {
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    position: relative;
+
+    display: block;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
 }
 
-.footer-logo img{
-    height:65px;
-    margin-bottom:15px;
+
+/* =========================================================
+   MAIN WHITE AREA
+   ========================================================= */
+
+.axion-end-main {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 42px 35px 34px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
 }
 
-footer p{
-    font-size:15px;
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.axion-end-brand {
+
+    text-align: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.axion-end-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    line-height: 1;
+
+}
+
+
+.axion-end-logo-a {
+
+    width: 47px;
+
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    margin-right: 4px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b438e,
+            #126ee0
+        );
+
+    color: #ffffff;
+
+    font-size: 31px;
+
+    font-weight: 900;
+
+    font-family: Arial, sans-serif;
+
+    box-shadow:
+        0 5px 15px rgba(0, 72, 160, 0.20);
+
+}
+
+
+.axion-end-logo-text {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 44px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    color: #083f87;
+
+}
+
+
+.axion-end-sublogo {
+
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #3e464f;
+
+}
+
+
+.axion-end-tagline {
+
+    margin: 13px 0 0;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #063e86;
+
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.axion-end-features {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 55px;
+
+}
+
+
+.axion-end-feature {
+
+    min-width: 90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.axion-end-feature-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 2px solid #073f8a;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #073f8a;
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.axion-end-feature span {
+
+    font-size: 8px;
+
+    line-height: 1.45;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    color: #073f8a;
+
+}
+
+
+/* =========================================================
+   BLUE CONTACT BAR
+   ========================================================= */
+
+.axion-end-contact-bar {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063e85 0%,
+            #0756ae 100%
+        );
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   CONTACT DETAILS
+   ========================================================= */
+
+.axion-end-contact {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    padding: 25px 35px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+.axion-end-contact-row {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+
+}
+
+
+.axion-end-contact-row i {
+
+    width: 15px;
+
+    flex: 0 0 15px;
+
+    margin-top: 2px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+}
+
+
+.axion-end-contact-row span {
+
+    color: #ffffff;
+
+}
+
+
+.axion-end-contact-row a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition: opacity 0.2s ease;
+
+}
+
+
+.axion-end-contact-row a:hover {
+
+    opacity: 0.75;
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   QR AREA
+   ========================================================= */
+
+.axion-end-qr-section {
+
+    width: 180px;
+
+    flex: 0 0 180px;
+
+    padding: 20px 25px;
+
+    box-sizing: border-box;
+
+    border-left: 1px solid rgba(255,255,255,0.35);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.axion-end-qr-box {
+
+    width: 86px;
+
+    height: 86px;
+
+    padding: 5px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 3px;
+
+}
+
+
+#axionEndQRCode {
+
+    width: 76px;
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+#axionEndQRCode img {
+
+    width: 76px !important;
+
+    height: 76px !important;
+
+    display: block;
+
+}
+
+
+.axion-end-qr-section p {
+
+    margin: 9px 0 0;
+
+    font-size: 8px;
+
+    line-height: 1.45;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.axion-end-bottom {
+
+    width: 100%;
+
+    padding: 9px 15px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: #052f67;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .axion-end-features {
+
+        gap: 30px;
+
+    }
+
+
+    .axion-end-contact {
+
+        padding-left: 25px;
+
+        padding-right: 20px;
+
+    }
+
+
+    .axion-end-qr-section {
+
+        width: 155px;
+
+        flex-basis: 155px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .axion-end-main {
+
+        padding: 32px 18px 27px;
+
+    }
+
+
+    .axion-end-logo-a {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 26px;
+
+    }
+
+
+    .axion-end-logo-text {
+
+        font-size: 36px;
+
+    }
+
+
+    .axion-end-sublogo {
+
+        font-size: 9px;
+
+        letter-spacing: 2.3px;
+
+    }
+
+
+    .axion-end-tagline {
+
+        font-size: 11px;
+
+    }
+
+
+    .axion-end-features {
+
+        gap: 10px;
+
+        justify-content: space-between;
+
+    }
+
+
+    .axion-end-feature {
+
+        min-width: 0;
+
+        flex: 1;
+
+    }
+
+
+    .axion-end-feature-icon {
+
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 14px;
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .axion-end-feature span {
+
+        font-size: 6.5px;
+
+    }
+
+
+    .axion-end-contact-bar {
+
+        flex-direction: column;
+
+    }
+
+
+    .axion-end-contact {
+
+        max-width: none;
+
+        padding: 20px 22px;
+
+        gap: 7px;
+
+    }
+
+
+    .axion-end-contact-row {
+
+        font-size: 10px;
+
+    }
+
+
+    .axion-end-qr-section {
+
+        width: 100%;
+
+        flex: none;
+
+        padding: 15px 20px 20px;
+
+        border-left: none;
+
+        border-top: 1px solid rgba(255,255,255,0.25);
+
+    }
+
+
+    .axion-end-qr-box {
+
+        width: 82px;
+
+        height: 82px;
+
+    }
+
+
+    #axionEndQRCode {
+
+        width: 72px;
+
+        height: 72px;
+
+    }
+
+
+    #axionEndQRCode img {
+
+        width: 72px !important;
+
+        height: 72px !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .axion-end-main {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+
+    }
+
+
+    .axion-end-logo-text {
+
+        font-size: 32px;
+
+    }
+
+
+    .axion-end-feature-icon {
+
+        width: 32px;
+
+        height: 32px;
+
+        font-size: 12px;
+
+    }
+
+
+    .axion-end-feature span {
+
+        font-size: 6px;
+
+    }
+
+
+    .axion-end-contact {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+
+    }
+
 }
 
 /* ===========================
