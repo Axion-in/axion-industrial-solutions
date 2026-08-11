@@ -1035,3 +1035,89 @@ if (axContactForm) {
     }
 
 })();
+
+/* =========================================================
+   AXION FINAL FOOTER
+   QR CODE + COPYRIGHT YEAR
+   ISOLATED JAVASCRIPT
+   ========================================================= */
+
+(function () {
+
+    "use strict";
+
+
+    /* =========================================
+       WEBSITE URL
+       ========================================= */
+
+    const axionWebsiteURL =
+        "https://axion-in.github.io/axion-industrial-solutions/";
+
+
+    /* =========================================
+       COPYRIGHT YEAR
+       ========================================= */
+
+    const axionYear =
+        document.getElementById("axionEndYear");
+
+    if (axionYear) {
+
+        axionYear.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =========================================
+       QR CODE
+       ========================================= */
+
+    const axionQR =
+        document.getElementById("axionEndQRCode");
+
+
+    if (!axionQR) {
+
+        return;
+
+    }
+
+
+    /* Prevent duplicate QR */
+
+    axionQR.innerHTML = "";
+
+
+    /* Check QRCode library */
+
+    if (typeof QRCode === "undefined") {
+
+        console.warn(
+            "Axion QR Code library is not loaded."
+        );
+
+        return;
+
+    }
+
+
+    new QRCode(axionQR, {
+
+        text: axionWebsiteURL,
+
+        width: 76,
+
+        height: 76,
+
+        colorDark: "#111111",
+
+        colorLight: "#ffffff",
+
+        correctLevel:
+            QRCode.CorrectLevel.H
+
+    });
+
+})();
