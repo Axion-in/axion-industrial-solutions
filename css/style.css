@@ -1208,330 +1208,43 @@ MOBILE
 
 }
 
-/* ==========================================
+/* =========================================================
    AXION INDUSTRIAL SOLUTIONS
-   FOOTER
-========================================== */
+   FINAL FOOTER
+========================================================= */
 
-.ax-footer {
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.ax-final-footer {
+
     width: 100%;
+
     margin: 0;
+
     padding: 0;
-    overflow: hidden;
-    font-family: inherit;
-}
 
-
-/* ==========================================
-   TOP WHITE AREA
-========================================== */
-
-.ax-footer-top {
-    width: 100%;
     background: #ffffff;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 50px;
-
-    padding: 28px 7% 26px;
+    font-family: "Poppins", Arial, sans-serif;
 
     box-sizing: border-box;
+
 }
 
 
-/* ==========================================
-   BRAND AREA
-========================================== */
+/* =========================================================
+   TOP WHITE AREA
+   LOGO → TAGLINE → ICONS
+========================================================= */
 
-.ax-footer-brand {
-    flex: 0 0 42%;
-    text-align: left;
-}
+.ax-footer-top {
 
-.ax-footer-logo {
-    width: 235px;
-    max-width: 100%;
-    height: auto;
-
-    display: block;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.35s ease,
-        filter 0.35s ease;
-}
-
-
-/* LOGO ZOOM */
-
-.ax-footer-logo:hover {
-    transform: scale(1.06);
-    filter: drop-shadow(0 8px 16px rgba(0, 55, 130, 0.18));
-}
-
-
-.ax-footer-tagline {
-    margin: 14px 0 0;
-
-    color: #084b98;
-
-    font-size: 18px;
-    font-weight: 700;
-
-    line-height: 1.4;
-}
-
-
-/* ==========================================
-   FEATURES
-========================================== */
-
-.ax-footer-features {
-    flex: 1;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(110px, 1fr));
-
-    align-items: center;
-
-    gap: 28px;
-}
-
-
-.ax-footer-feature {
-    text-align: center;
-
-    color: #064c9d;
-
-    min-width: 0;
-}
-
-
-.ax-feature-icon {
-    width: 62px;
-    height: 62px;
-
-    margin: 0 auto 10px;
-
-    border: 3px solid #0752a2;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 25px;
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease;
-}
-
-
-.ax-footer-feature:hover .ax-feature-icon {
-    transform: scale(1.1);
-
-    background: #0752a2;
-
-    color: #ffffff;
-}
-
-
-.ax-footer-feature span {
-    display: block;
-
-    color: #06458f;
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-    line-height: 1.3;
-
-    letter-spacing: 0.3px;
-}
-
-
-/* ==========================================
-   BLUE INFORMATION BAR
-========================================== */
-
-.ax-footer-info {
     width: 100%;
 
-    background:
-        linear-gradient(
-            135deg,
-            #08478f,
-            #0758ae
-        );
-
-    color: #ffffff;
-
-    display: grid;
-
-    grid-template-columns:
-        1.1fr 1.1fr 0.55fr;
-
-    align-items: center;
-
-    gap: 0;
-
-    padding: 28px 7%;
-
-    box-sizing: border-box;
-}
-
-
-/* ==========================================
-   COMMON COLUMN
-========================================== */
-
-.ax-footer-column {
-    min-width: 0;
-
-    box-sizing: border-box;
-}
-
-
-/* ==========================================
-   ADDRESS
-========================================== */
-
-.ax-address {
-    padding-right: 45px;
-
-    border-right:
-        1px solid rgba(255,255,255,0.28);
-}
-
-
-.ax-footer-info-row {
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 14px;
-
-    margin-bottom: 12px;
-}
-
-
-.ax-footer-info-row:last-child {
-    margin-bottom: 0;
-}
-
-
-.ax-footer-info-row i {
-    width: 22px;
-
-    flex-shrink: 0;
-
-    text-align: center;
-
-    font-size: 17px;
-
-    color: #ffffff;
-
-    margin-top: 3px;
-}
-
-
-.ax-footer-info-row p {
-    margin: 0;
-
-    color: #ffffff;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    line-height: 1.55;
-}
-
-
-.ax-footer-info-row a {
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    line-height: 1.4;
-
-    transition: opacity 0.25s ease;
-}
-
-
-.ax-footer-info-row a:hover {
-    opacity: 0.75;
-}
-
-
-/* ==========================================
-   COMPANY MESSAGE
-========================================== */
-
-.ax-company {
-    padding: 0 45px;
-}
-
-
-.ax-company h3 {
-    display: inline-block;
-
-    margin: 0 0 12px;
-
-    padding: 3px 8px;
-
-    color: #ffffff;
-
-    background: rgba(0, 55, 130, 0.45);
-
-    font-size: 21px;
-
-    font-weight: 800;
-
-    letter-spacing: 0.3px;
-}
-
-
-.ax-company p {
-    margin: 0;
-
-    max-width: 500px;
-
-    color: #ffffff;
-
-    font-size: 16px;
-
-    font-weight: 500;
-
-    line-height: 1.55;
-}
-
-
-/* ==========================================
-   QR SECTION
-========================================== */
-
-.ax-qr {
-    min-height: 150px;
-
-    padding-left: 40px;
-
-    border-left:
-        1px solid rgba(255,255,255,0.28);
+    background: #ffffff;
 
     display: flex;
 
@@ -1542,18 +1255,19 @@ MOBILE
     justify-content: center;
 
     text-align: center;
+
+    padding: 38px 20px 32px;
+
+    box-sizing: border-box;
+
 }
 
 
-.ax-qr-box {
-    width: 125px;
-    height: 125px;
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
 
-    padding: 7px;
-
-    background: #ffffff;
-
-    border-radius: 5px;
+.ax-footer-logo-wrap {
 
     display: flex;
 
@@ -1561,39 +1275,414 @@ MOBILE
 
     justify-content: center;
 
-    box-sizing: border-box;
+    margin-bottom: 8px;
 
-    box-shadow:
-        0 6px 18px rgba(0,0,0,0.16);
+}
+
+
+.ax-footer-logo {
+
+    width: 230px;
+
+    max-width: 75vw;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
 
     cursor: pointer;
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform 0.35s ease,
+        filter 0.35s ease;
+
 }
 
 
-.ax-qr-box:hover {
+/* LOGO TOUCH / HOVER ZOOM */
+
+.ax-footer-logo:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   TAGLINE
+========================================================= */
+
+.ax-footer-tagline {
+
+    margin: 0 0 28px;
+
+    padding: 0;
+
+    color: #064a96;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   FEATURES / ICONS
+========================================================= */
+
+.ax-footer-features {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* EACH FEATURE */
+
+.ax-footer-feature {
+
+    flex: 1;
+
+    min-width: 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   FEATURE ICON CIRCLE
+========================================================= */
+
+.ax-feature-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    border: 3px solid #0753a2;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #0753a2;
+
+    font-size: 25px;
+
+    margin-bottom: 9px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+/* ICON HOVER */
+
+.ax-footer-feature:hover .ax-feature-icon {
+
+    transform: scale(1.08);
+
+    background: #0753a2;
+
+    color: #ffffff;
+
+}
+
+
+/* FEATURE TEXT */
+
+.ax-footer-feature span {
+
+    color: #064a96;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+/* =========================================================
+   BLUE INFORMATION BAR
+========================================================= */
+
+.ax-footer-blue-bar {
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0753a2 0%,
+            #0b5db3 100%
+        );
+
+    color: #ffffff;
+
+    box-sizing: border-box;
+
+}
+
+
+/* INNER CONTENT */
+
+.ax-footer-blue-inner {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        230px;
+
+    align-items: center;
+
+    gap: 0;
+
+    padding: 30px 35px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   ADDRESS AREA
+========================================================= */
+
+.ax-footer-address {
+
+    padding-right: 35px;
+
+    border-right: 1px solid rgba(255,255,255,0.35);
+
+}
+
+
+.ax-footer-info-row {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 14px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.45;
+
+}
+
+
+.ax-footer-info-row:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.ax-footer-info-row i {
+
+    width: 22px;
+
+    min-width: 22px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    margin-top: 3px;
+
+    color: #ffffff;
+
+}
+
+
+/* LINKS */
+
+.ax-footer-info-row a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition: opacity 0.25s ease;
+
+}
+
+
+.ax-footer-info-row a:hover {
+
+    opacity: 0.75;
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   COMPANY DESCRIPTION
+========================================================= */
+
+.ax-footer-company {
+
+    padding:
+        0
+        25px;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,0.35);
+
+}
+
+
+.ax-footer-company h3 {
+
+    display: inline-block;
+
+    margin: 0 0 12px;
+
+    padding: 5px 10px;
+
+    color: #ffffff;
+
+    background: rgba(0,55,130,0.35);
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+
+}
+
+
+.ax-footer-company p {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   QR AREA
+========================================================= */
+
+.ax-footer-qr {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding-left: 25px;
+
+}
+
+
+/* QR IMAGE */
+
+.ax-footer-qr img {
+
+    width: 128px;
+
+    height: 128px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border-radius: 6px;
+
+    display: block;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+/* QR HOVER */
+
+.ax-footer-qr a:hover img {
+
     transform: scale(1.06);
 
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.22);
 }
 
 
-.ax-qr-box img {
-    width: 100%;
-    height: 100%;
+/* QR TEXT */
+
+.ax-footer-qr span {
 
     display: block;
-}
 
-
-.ax-qr > span {
-    display: block;
-
-    margin-top: 10px;
+    margin-top: 9px;
 
     color: #ffffff;
 
@@ -1603,161 +1692,352 @@ MOBILE
 
     line-height: 1.35;
 
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
+
 }
 
 
-/* ==========================================
+/* =========================================================
    COPYRIGHT
-========================================== */
+========================================================= */
 
-.ax-footer-bottom {
+.ax-footer-copyright {
+
     width: 100%;
+
+    min-height: 52px;
+
+    background: #073b76;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
 
     padding: 12px 20px;
 
     box-sizing: border-box;
 
-    background: #07386f;
-
-    color: #ffffff;
-
-    text-align: center;
-
     font-size: 14px;
 
     font-weight: 500;
 
-    line-height: 1.4;
 }
 
 
-/* ==========================================
+/* =========================================================
    TABLET
-========================================== */
+========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-    .ax-footer-top {
-
-        padding-left: 5%;
-        padding-right: 5%;
-
-        gap: 30px;
-    }
-
-
-    .ax-footer-brand {
-        flex-basis: 36%;
-    }
-
-
-    .ax-footer-logo {
-        width: 200px;
-    }
-
-
-    .ax-footer-features {
-
-        gap: 14px;
-    }
-
-
-    .ax-footer-info {
-
-        padding-left: 5%;
-        padding-right: 5%;
+    .ax-footer-blue-inner {
 
         grid-template-columns:
-            1fr 1fr 0.5fr;
+            1fr
+            1fr
+            180px;
+
+        padding:
+            28px 22px;
+
     }
 
 
-    .ax-address {
-        padding-right: 25px;
+    .ax-footer-address {
+
+        padding-right: 20px;
+
     }
 
 
-    .ax-company {
-        padding-left: 25px;
-        padding-right: 25px;
+    .ax-footer-company {
+
+        padding:
+            0
+            20px;
+
     }
 
 
-    .ax-qr {
-        padding-left: 25px;
+    .ax-footer-qr {
+
+        padding-left: 20px;
+
+    }
+
+
+    .ax-footer-company h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .ax-footer-company p {
+
+        font-size: 14px;
+
+    }
+
+
+    .ax-footer-info-row {
+
+        font-size: 14px;
+
     }
 
 }
 
 
-/* ==========================================
+/* =========================================================
    MOBILE
-========================================== */
+========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+
+    /* TOP AREA */
 
     .ax-footer-top {
 
-        display: flex;
+        padding:
+            30px
+            15px
+            28px;
 
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 22px;
-
-        padding: 24px 20px 25px;
     }
 
 
-    .ax-footer-brand {
-
-        width: 100%;
-
-        flex: none;
-
-        text-align: center;
-    }
-
+    /* LOGO */
 
     .ax-footer-logo {
 
-        width: 205px;
+        width: 190px;
 
-        margin: 0 auto;
     }
 
+
+    /* TAGLINE */
 
     .ax-footer-tagline {
 
-        margin-top: 10px;
-
         font-size: 16px;
+
+        margin-bottom: 24px;
+
     }
 
 
+    /* ICONS */
+
     .ax-footer-features {
 
-        width: 100%;
+        display: grid;
 
         grid-template-columns:
-            repeat(4, 1fr);
+            repeat(2, 1fr);
 
-        gap: 8px;
+        gap:
+            24px
+            15px;
+
+        max-width: 360px;
+
+    }
+
+
+    .ax-footer-feature {
+
+        min-width: 0;
+
     }
 
 
     .ax-feature-icon {
 
-        width: 52px;
-        height: 52px;
+        width: 54px;
 
-        border-width: 2px;
+        height: 54px;
+
+        font-size: 22px;
+
+    }
+
+
+    .ax-footer-feature span {
+
+        font-size: 11px;
+
+    }
+
+
+    /* BLUE BAR */
+
+    .ax-footer-blue-inner {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding:
+            25px
+            20px;
+
+    }
+
+
+    /* ADDRESS */
+
+    .ax-footer-address {
+
+        width: 100%;
+
+        padding:
+            0
+            0
+            20px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,0.35);
+
+    }
+
+
+    .ax-footer-info-row {
+
+        font-size: 14px;
+
+        gap: 12px;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    /* COMPANY */
+
+    .ax-footer-company {
+
+        width: 100%;
+
+        padding:
+            20px
+            0;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,0.35);
+
+    }
+
+
+    .ax-footer-company h3 {
+
+        font-size: 18px;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .ax-footer-company p {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+
+    /* QR */
+
+    .ax-footer-qr {
+
+        width: 100%;
+
+        padding:
+            20px
+            0
+            0;
+
+    }
+
+
+    .ax-footer-qr img {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+
+    .ax-footer-qr span {
+
+        font-size: 12px;
+
+    }
+
+
+    /* COPYRIGHT */
+
+    .ax-footer-copyright {
+
+        min-height: 48px;
+
+        font-size: 12px;
+
+        padding:
+            10px
+            15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .ax-footer-logo {
+
+        width: 170px;
+
+    }
+
+
+    .ax-footer-features {
+
+        gap:
+            20px
+            10px;
+
+    }
+
+
+    .ax-feature-icon {
+
+        width: 50px;
+
+        height: 50px;
 
         font-size: 20px;
 
-        margin-bottom: 7px;
     }
 
 
@@ -1765,162 +2045,6 @@ MOBILE
 
         font-size: 10px;
 
-        line-height: 1.25;
-    }
-
-
-    /* BLUE BAR */
-
-    .ax-footer-info {
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 22px;
-
-        padding: 24px 20px;
-
-        text-align: left;
-    }
-
-
-    .ax-address {
-
-        width: 100%;
-
-        padding: 0 0 20px;
-
-        border-right: none;
-
-        border-bottom:
-            1px solid rgba(255,255,255,0.28);
-    }
-
-
-    .ax-company {
-
-        width: 100%;
-
-        padding: 0 0 20px;
-
-        border-bottom:
-            1px solid rgba(255,255,255,0.28);
-    }
-
-
-    .ax-company h3 {
-
-        font-size: 18px;
-
-        margin-bottom: 10px;
-    }
-
-
-    .ax-company p {
-
-        max-width: none;
-
-        font-size: 14px;
-
-        line-height: 1.5;
-    }
-
-
-    .ax-footer-info-row {
-
-        margin-bottom: 10px;
-
-        gap: 11px;
-    }
-
-
-    .ax-footer-info-row p,
-    .ax-footer-info-row a {
-
-        font-size: 14px;
-    }
-
-
-    .ax-footer-info-row i {
-
-        font-size: 15px;
-    }
-
-
-    .ax-qr {
-
-        width: 100%;
-
-        min-height: auto;
-
-        padding: 0;
-
-        border-left: none;
-
-        text-align: center;
-    }
-
-
-    .ax-qr-box {
-
-        width: 115px;
-        height: 115px;
-    }
-
-
-    .ax-qr > span {
-
-        font-size: 12px;
-    }
-
-
-    .ax-footer-bottom {
-
-        font-size: 12px;
-
-        padding: 11px 15px;
-    }
-
-}
-
-
-/* ==========================================
-   SMALL MOBILE
-========================================== */
-
-@media (max-width: 420px) {
-
-    .ax-footer-features {
-
-        gap: 3px;
-    }
-
-
-    .ax-feature-icon {
-
-        width: 45px;
-        height: 45px;
-
-        font-size: 17px;
-    }
-
-
-    .ax-footer-feature span {
-
-        font-size: 8px;
-    }
-
-
-    .ax-footer-logo {
-
-        width: 180px;
-    }
-
-
-    .ax-footer-tagline {
-
-        font-size: 14px;
     }
 
 }
