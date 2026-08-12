@@ -1208,17 +1208,17 @@ MOBILE
 
 }
 
-/* =========================================================
+/* =====================================================
    AXION INDUSTRIAL SOLUTIONS
-   FINAL FOOTER
-========================================================= */
+   FOOTER CSS
+===================================================== */
 
 
-/* =========================================================
+/* =====================================================
    MAIN FOOTER
-========================================================= */
+===================================================== */
 
-.ax-final-footer {
+.ax-footer {
 
     width: 100%;
 
@@ -1226,19 +1226,18 @@ MOBILE
 
     padding: 0;
 
-    background: #ffffff;
-
     font-family: "Poppins", Arial, sans-serif;
 
-    box-sizing: border-box;
+    overflow: hidden;
+
+    background: #ffffff;
 
 }
 
 
-/* =========================================================
-   TOP WHITE AREA
-   LOGO → TAGLINE → ICONS
-========================================================= */
+/* =====================================================
+   TOP FOOTER AREA
+===================================================== */
 
 .ax-footer-top {
 
@@ -1246,51 +1245,30 @@ MOBILE
 
     background: #ffffff;
 
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
     text-align: center;
 
-    padding: 38px 20px 32px;
+    padding: 35px 20px 30px;
 
     box-sizing: border-box;
 
 }
 
 
-/* =========================================================
-   FOOTER LOGO
-========================================================= */
-
-.ax-footer-logo-wrap {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-bottom: 8px;
-
-}
-
+/* =====================================================
+   LOGO
+===================================================== */
 
 .ax-footer-logo {
 
-    width: 230px;
+    width: 240px;
 
-    max-width: 75vw;
+    max-width: 75%;
 
     height: auto;
 
     display: block;
 
-    object-fit: contain;
+    margin: 0 auto 12px;
 
     cursor: pointer;
 
@@ -1301,64 +1279,65 @@ MOBILE
 }
 
 
-/* LOGO TOUCH / HOVER ZOOM */
+/* LOGO HOVER / TOUCH */
 
 .ax-footer-logo:hover {
 
-    transform: scale(1.08);
+    transform: scale(1.06);
 
 }
 
 
-/* =========================================================
+/* =====================================================
    TAGLINE
-========================================================= */
+===================================================== */
 
 .ax-footer-tagline {
 
-    margin: 0 0 28px;
+    margin: 0 auto 25px;
 
-    padding: 0;
+    color: #0b4f9c;
 
-    color: #064a96;
-
-    font-size: 19px;
-
-    font-weight: 700;
+    font-size: 21px;
 
     line-height: 1.4;
+
+    font-weight: 700;
 
 }
 
 
-/* =========================================================
-   FEATURES / ICONS
-========================================================= */
+/* =====================================================
+   VALUES
+===================================================== */
 
-.ax-footer-features {
+.ax-footer-values {
 
     width: 100%;
 
     max-width: 900px;
 
-    display: flex;
+    margin: 0 auto;
 
-    align-items: flex-start;
+    display: grid;
 
-    justify-content: space-between;
+    grid-template-columns:
+        repeat(4, 1fr);
 
-    gap: 30px;
+    gap: 25px;
+
+    align-items: start;
+
+    justify-content: center;
 
 }
 
 
-/* EACH FEATURE */
+/* =====================================================
+   VALUE ITEM
+===================================================== */
 
-.ax-footer-feature {
-
-    flex: 1;
-
-    min-width: 120px;
+.ax-footer-value {
 
     display: flex;
 
@@ -1373,17 +1352,17 @@ MOBILE
 }
 
 
-/* =========================================================
-   FEATURE ICON CIRCLE
-========================================================= */
+/* =====================================================
+   VALUE ICON
+===================================================== */
 
-.ax-feature-icon {
+.ax-footer-icon {
 
     width: 58px;
 
     height: 58px;
 
-    border: 3px solid #0753a2;
+    border: 3px solid #0b4f9c;
 
     border-radius: 50%;
 
@@ -1393,9 +1372,9 @@ MOBILE
 
     justify-content: center;
 
-    color: #0753a2;
+    color: #0b4f9c;
 
-    font-size: 25px;
+    font-size: 24px;
 
     margin-bottom: 9px;
 
@@ -1411,96 +1390,105 @@ MOBILE
 
 /* ICON HOVER */
 
-.ax-footer-feature:hover .ax-feature-icon {
+.ax-footer-value:hover
+.ax-footer-icon {
 
     transform: scale(1.08);
 
-    background: #0753a2;
+    background: #0b4f9c;
 
     color: #ffffff;
 
 }
 
 
-/* FEATURE TEXT */
+/* =====================================================
+   VALUE TEXT
+===================================================== */
 
-.ax-footer-feature span {
+.ax-footer-value span {
 
-    color: #064a96;
+    color: #06488f;
 
     font-size: 13px;
 
+    line-height: 1.35;
+
     font-weight: 800;
 
-    line-height: 1.25;
-
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    BLUE INFORMATION BAR
-========================================================= */
+===================================================== */
 
-.ax-footer-blue-bar {
+.ax-footer-blue {
 
     width: 100%;
 
     background:
         linear-gradient(
             135deg,
-            #0753a2 0%,
-            #0b5db3 100%
+            #0b4f9c 0%,
+            #0758ad 50%,
+            #0b4f9c 100%
         );
 
     color: #ffffff;
 
-    box-sizing: border-box;
-
-}
-
-
-/* INNER CONTENT */
-
-.ax-footer-blue-inner {
-
-    width: 100%;
-
-    max-width: 1250px;
-
-    margin: 0 auto;
-
     display: grid;
 
     grid-template-columns:
-        1fr
-        1fr
-        230px;
+        1fr 1fr 0.55fr;
 
-    align-items: center;
+    align-items: stretch;
 
     gap: 0;
 
-    padding: 30px 35px;
+    box-sizing: border-box;
+
+    padding: 30px
+        clamp(25px, 8vw, 120px);
+
+}
+
+
+/* =====================================================
+   BLUE BAR COLUMNS
+===================================================== */
+
+.ax-footer-column {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
 
     box-sizing: border-box;
 
 }
 
 
-/* =========================================================
-   ADDRESS AREA
-========================================================= */
+/* =====================================================
+   ADDRESS COLUMN
+===================================================== */
 
 .ax-footer-address {
 
     padding-right: 35px;
 
-    border-right: 1px solid rgba(255,255,255,0.35);
-
 }
 
+
+/* =====================================================
+   INFO ROW
+===================================================== */
 
 .ax-footer-info-row {
 
@@ -1512,14 +1500,6 @@ MOBILE
 
     margin-bottom: 14px;
 
-    color: #ffffff;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    line-height: 1.45;
-
 }
 
 
@@ -1530,15 +1510,19 @@ MOBILE
 }
 
 
-.ax-footer-info-row i {
+/* =====================================================
+   INFO ICON
+===================================================== */
 
-    width: 22px;
+.ax-footer-info-row > i {
 
-    min-width: 22px;
+    width: 25px;
 
-    text-align: center;
+    min-width: 25px;
 
     font-size: 18px;
+
+    text-align: center;
 
     margin-top: 3px;
 
@@ -1547,7 +1531,30 @@ MOBILE
 }
 
 
-/* LINKS */
+/* =====================================================
+   ADDRESS TEXT
+===================================================== */
+
+.ax-footer-info-row p {
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
 
 .ax-footer-info-row a {
 
@@ -1555,29 +1562,42 @@ MOBILE
 
     text-decoration: none;
 
-    transition: opacity 0.25s ease;
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    font-weight: 600;
+
+    word-break: break-word;
+
+    transition:
+        opacity 0.25s ease,
+        text-decoration 0.25s ease;
 
 }
 
 
 .ax-footer-info-row a:hover {
 
-    opacity: 0.75;
+    opacity: 0.85;
 
     text-decoration: underline;
 
 }
 
 
-/* =========================================================
-   COMPANY DESCRIPTION
-========================================================= */
+/* =====================================================
+   VERTICAL DIVIDER
+===================================================== */
 
-.ax-footer-company {
+.ax-footer-about {
 
     padding:
-        0
-        25px;
+        0 40px;
+
+    border-left:
+        1px solid
+        rgba(255,255,255,0.35);
 
     border-right:
         1px solid
@@ -1586,59 +1606,98 @@ MOBILE
 }
 
 
-.ax-footer-company h3 {
+/* =====================================================
+   COMPANY TITLE
+===================================================== */
+
+.ax-footer-about h3 {
 
     display: inline-block;
 
-    margin: 0 0 12px;
+    width: fit-content;
 
-    padding: 5px 10px;
+    margin: 0 0 14px;
+
+    padding: 4px 10px;
+
+    background:
+        rgba(0, 55, 130, 0.45);
 
     color: #ffffff;
 
-    background: rgba(0,55,130,0.35);
-
     font-size: 22px;
 
-    font-weight: 800;
+    line-height: 1.3;
 
-    line-height: 1.25;
+    font-weight: 800;
 
 }
 
 
-.ax-footer-company p {
+/* =====================================================
+   COMPANY DESCRIPTION
+===================================================== */
 
-    margin: 0;
+.ax-footer-about p {
+
+    margin: 0 0 12px;
 
     color: #ffffff;
 
     font-size: 16px;
 
-    font-weight: 500;
-
     line-height: 1.55;
+
+    font-weight: 500;
 
 }
 
 
-/* =========================================================
-   QR AREA
-========================================================= */
+.ax-footer-about p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =====================================================
+   QR COLUMN
+===================================================== */
+
+.ax-footer-qr-column {
+
+    padding-left: 35px;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   QR CONTAINER
+===================================================== */
 
 .ax-footer-qr {
 
-    display: flex;
+    width: 150px;
 
-    flex-direction: column;
+    height: 150px;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    text-align: center;
-
-    padding-left: 25px;
+    box-sizing: border-box;
 
 }
 
@@ -1647,168 +1706,142 @@ MOBILE
 
 .ax-footer-qr img {
 
-    width: 128px;
-
-    height: 128px;
-
-    padding: 6px;
-
-    background: #ffffff;
-
-    border-radius: 6px;
-
     display: block;
 
-    box-sizing: border-box;
+    width: 134px;
 
-    transition:
-        transform 0.3s ease;
+    height: 134px;
 
 }
 
 
-/* QR HOVER */
+/* =====================================================
+   QR TEXT
+===================================================== */
 
-.ax-footer-qr a:hover img {
+.ax-footer-qr-text {
 
-    transform: scale(1.06);
-
-}
-
-
-/* QR TEXT */
-
-.ax-footer-qr span {
-
-    display: block;
-
-    margin-top: 9px;
+    margin: 10px 0 0;
 
     color: #ffffff;
 
-    font-size: 13px;
-
-    font-weight: 800;
+    font-size: 14px;
 
     line-height: 1.35;
 
-    letter-spacing: 0.4px;
+    font-weight: 800;
+
+    text-align: center;
+
+    letter-spacing: 0.3px;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    COPYRIGHT
-========================================================= */
+===================================================== */
 
-.ax-footer-copyright {
+.ax-footer-bottom {
 
     width: 100%;
-
-    min-height: 52px;
 
     background: #073b76;
 
     color: #ffffff;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
     text-align: center;
 
-    padding: 12px 20px;
+    padding: 13px 15px;
 
     box-sizing: border-box;
 
+}
+
+
+.ax-footer-bottom p {
+
+    margin: 0;
+
     font-size: 14px;
+
+    line-height: 1.5;
 
     font-weight: 500;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    TABLET
-========================================================= */
+===================================================== */
 
 @media (max-width: 900px) {
 
-    .ax-footer-blue-inner {
+    .ax-footer-values {
+
+        max-width: 750px;
+
+        gap: 18px;
+
+    }
+
+
+    .ax-footer-blue {
 
         grid-template-columns:
-            1fr
-            1fr
-            180px;
+            1fr 1fr;
 
         padding:
-            28px 22px;
+            30px 35px;
+
+        row-gap: 30px;
 
     }
 
 
     .ax-footer-address {
 
-        padding-right: 20px;
+        padding-right: 25px;
 
     }
 
 
-    .ax-footer-company {
+    .ax-footer-about {
 
         padding:
-            0
-            20px;
+            0 25px;
 
     }
 
 
-    .ax-footer-qr {
+    .ax-footer-qr-column {
 
-        padding-left: 20px;
+        grid-column:
+            1 / -1;
 
-    }
+        padding:
+            25px 0 0;
 
-
-    .ax-footer-company h3 {
-
-        font-size: 18px;
-
-    }
-
-
-    .ax-footer-company p {
-
-        font-size: 14px;
-
-    }
-
-
-    .ax-footer-info-row {
-
-        font-size: 14px;
+        border-top:
+            1px solid
+            rgba(255,255,255,0.3);
 
     }
 
 }
 
 
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
-@media (max-width: 700px) {
-
-    /* TOP AREA */
+@media (max-width: 600px) {
 
     .ax-footer-top {
 
         padding:
-            30px
-            15px
-            28px;
+            28px 15px 25px;
 
     }
 
@@ -1819,6 +1852,8 @@ MOBILE
 
         width: 190px;
 
+        margin-bottom: 10px;
+
     }
 
 
@@ -1826,69 +1861,58 @@ MOBILE
 
     .ax-footer-tagline {
 
-        font-size: 16px;
+        font-size: 17px;
 
-        margin-bottom: 24px;
+        margin-bottom: 22px;
 
     }
 
 
-    /* ICONS */
+    /* VALUES */
 
-    .ax-footer-features {
-
-        display: grid;
+    .ax-footer-values {
 
         grid-template-columns:
             repeat(2, 1fr);
 
         gap:
-            24px
-            15px;
-
-        max-width: 360px;
+            22px 15px;
 
     }
 
 
-    .ax-footer-feature {
+    .ax-footer-icon {
 
-        min-width: 0;
+        width: 52px;
 
-    }
+        height: 52px;
 
+        font-size: 21px;
 
-    .ax-feature-icon {
-
-        width: 54px;
-
-        height: 54px;
-
-        font-size: 22px;
+        border-width: 2px;
 
     }
 
 
-    .ax-footer-feature span {
+    .ax-footer-value span {
 
         font-size: 11px;
 
     }
 
 
-    /* BLUE BAR */
+    /* BLUE AREA */
 
-    .ax-footer-blue-inner {
+    .ax-footer-blue {
 
         display: flex;
 
         flex-direction: column;
 
-        align-items: stretch;
-
         padding:
-            25px
-            20px;
+            28px 22px;
+
+        gap: 28px;
 
     }
 
@@ -1897,62 +1921,44 @@ MOBILE
 
     .ax-footer-address {
 
-        width: 100%;
-
         padding:
-            0
-            0
-            20px;
-
-        border-right: none;
+            0 0 24px;
 
         border-bottom:
             1px solid
-            rgba(255,255,255,0.35);
-
-    }
-
-
-    .ax-footer-info-row {
-
-        font-size: 14px;
-
-        gap: 12px;
-
-        margin-bottom: 12px;
+            rgba(255,255,255,0.3);
 
     }
 
 
     /* COMPANY */
 
-    .ax-footer-company {
-
-        width: 100%;
+    .ax-footer-about {
 
         padding:
-            20px
-            0;
+            0 0 24px;
+
+        border-left: none;
 
         border-right: none;
 
         border-bottom:
             1px solid
-            rgba(255,255,255,0.35);
+            rgba(255,255,255,0.3);
 
     }
 
 
-    .ax-footer-company h3 {
+    .ax-footer-about h3 {
 
         font-size: 18px;
 
-        margin-bottom: 10px;
+        margin-bottom: 12px;
 
     }
 
 
-    .ax-footer-company p {
+    .ax-footer-about p {
 
         font-size: 14px;
 
@@ -1963,54 +1969,82 @@ MOBILE
 
     /* QR */
 
-    .ax-footer-qr {
-
-        width: 100%;
+    .ax-footer-qr-column {
 
         padding:
-            20px
-            0
             0;
+
+        border-top: none;
+
+    }
+
+
+    .ax-footer-qr {
+
+        width: 140px;
+
+        height: 140px;
 
     }
 
 
     .ax-footer-qr img {
 
-        width: 120px;
+        width: 124px;
 
-        height: 120px;
+        height: 124px;
 
     }
 
 
-    .ax-footer-qr span {
+    .ax-footer-qr-text {
 
-        font-size: 12px;
+        font-size: 13px;
+
+    }
+
+
+    /* INFO TEXT */
+
+    .ax-footer-info-row {
+
+        gap: 11px;
+
+        margin-bottom: 12px;
+
+    }
+
+
+    .ax-footer-info-row p,
+    .ax-footer-info-row a {
+
+        font-size: 14px;
 
     }
 
 
     /* COPYRIGHT */
 
-    .ax-footer-copyright {
-
-        min-height: 48px;
-
-        font-size: 12px;
+    .ax-footer-bottom {
 
         padding:
-            10px
-            15px;
+            11px 12px;
+
+    }
+
+
+    .ax-footer-bottom p {
+
+        font-size: 12px;
 
     }
 
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
 
 @media (max-width: 380px) {
 
@@ -2021,29 +2055,25 @@ MOBILE
     }
 
 
-    .ax-footer-features {
+    .ax-footer-values {
 
         gap:
-            20px
-            10px;
+            18px 8px;
 
     }
 
 
-    .ax-feature-icon {
-
-        width: 50px;
-
-        height: 50px;
-
-        font-size: 20px;
-
-    }
-
-
-    .ax-footer-feature span {
+    .ax-footer-value span {
 
         font-size: 10px;
+
+    }
+
+
+    .ax-footer-blue {
+
+        padding:
+            25px 17px;
 
     }
 
