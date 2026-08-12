@@ -1044,107 +1044,62 @@ if (axContactForm) {
 document.addEventListener("DOMContentLoaded", function () {
 
     /* ==========================================
+       AUTOMATIC WEBSITE QR CODE
+    ========================================== */
+
+    const qrContainer =
+        document.getElementById("axQrCode");
+
+    if (qrContainer && typeof QRCode !== "undefined") {
+
+        qrContainer.innerHTML = "";
+
+        new QRCode(qrContainer, {
+
+            text: window.location.href,
+
+            width: 111,
+
+            height: 111,
+
+            colorDark: "#000000",
+
+            colorLight: "#ffffff",
+
+            correctLevel: QRCode.CorrectLevel.H
+
+        });
+
+    }
+
+
+    /* ==========================================
        FOOTER YEAR
     ========================================== */
 
-    const axFooterYear =
+    const yearElement =
         document.getElementById("axFooterYear");
 
-    if (axFooterYear) {
+    if (yearElement) {
 
-        axFooterYear.textContent =
+        yearElement.textContent =
             new Date().getFullYear();
 
     }
 
 
     /* ==========================================
-       LOGO TOUCH / CLICK ZOOM
+       LOGO CLICK ZOOM
     ========================================== */
 
-    const axFooterLogoBtn =
-        document.querySelector(
-            ".ax-footer-logo-btn"
-        );
+    const footerLogo =
+        document.getElementById("axFooterLogo");
 
-    const axFooterLogo =
-        document.querySelector(
-            ".ax-footer-logo"
-        );
+    if (footerLogo) {
 
-    if (
-        axFooterLogoBtn &&
-        axFooterLogo
-    ) {
+        footerLogo.addEventListener("click", function () {
 
-        axFooterLogoBtn.addEventListener(
-            "click",
-            function () {
-
-                axFooterLogo.classList.toggle(
-                    "ax-footer-logo-zoom"
-                );
-
-            }
-        );
-
-
-        /* Close zoom when clicking outside */
-
-        document.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    !axFooterLogoBtn.contains(
-                        event.target
-                    )
-                ) {
-
-                    axFooterLogo.classList.remove(
-                        "ax-footer-logo-zoom"
-                    );
-
-                }
-
-            }
-        );
-
-    }
-
-
-    /* ==========================================
-       QR CODE
-       CURRENT WEBSITE URL AUTOMATICALLY
-    ========================================== */
-
-    const axQR =
-        document.getElementById(
-            "axFooterQRCode"
-        );
-
-    if (
-        axQR &&
-        typeof QRCode !== "undefined"
-    ) {
-
-        const axWebsiteURL =
-            window.location.href;
-
-        new QRCode(axQR, {
-
-            text: axWebsiteURL,
-
-            width: 100,
-
-            height: 100,
-
-            colorDark: "#000000",
-
-            colorLight: "#ffffff",
-
-            correctLevel:
-                QRCode.CorrectLevel.H
+            this.classList.toggle("ax-logo-zoom");
 
         });
 
