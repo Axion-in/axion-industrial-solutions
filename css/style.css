@@ -1208,877 +1208,6 @@ MOBILE
 
 }
 
-/* =====================================================
-   AXION INDUSTRIAL SOLUTIONS
-   FOOTER CSS
-===================================================== */
-
-
-/* =====================================================
-   MAIN FOOTER
-===================================================== */
-
-.ax-footer {
-
-    width: 100%;
-
-    margin: 0;
-
-    padding: 0;
-
-    font-family: "Poppins", Arial, sans-serif;
-
-    overflow: hidden;
-
-    background: #ffffff;
-
-}
-
-
-/* =====================================================
-   TOP FOOTER AREA
-===================================================== */
-
-.ax-footer-top {
-
-    width: 100%;
-
-    background: #ffffff;
-
-    text-align: center;
-
-    padding: 35px 20px 30px;
-
-    box-sizing: border-box;
-
-}
-
-
-/* =====================================================
-   LOGO
-===================================================== */
-
-.ax-footer-logo {
-
-    width: 240px;
-
-    max-width: 75%;
-
-    height: auto;
-
-    display: block;
-
-    margin: 0 auto 12px;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.35s ease,
-        filter 0.35s ease;
-
-}
-
-
-/* LOGO HOVER / TOUCH */
-
-.ax-footer-logo:hover {
-
-    transform: scale(1.06);
-
-}
-
-
-/* =====================================================
-   TAGLINE
-===================================================== */
-
-.ax-footer-tagline {
-
-    margin: 0 auto 25px;
-
-    color: #0b4f9c;
-
-    font-size: 21px;
-
-    line-height: 1.4;
-
-    font-weight: 700;
-
-}
-
-
-/* =====================================================
-   VALUES
-===================================================== */
-
-.ax-footer-values {
-
-    width: 100%;
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 25px;
-
-    align-items: start;
-
-    justify-content: center;
-
-}
-
-
-/* =====================================================
-   VALUE ITEM
-===================================================== */
-
-.ax-footer-value {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: flex-start;
-
-    text-align: center;
-
-}
-
-
-/* =====================================================
-   VALUE ICON
-===================================================== */
-
-.ax-footer-icon {
-
-    width: 58px;
-
-    height: 58px;
-
-    border: 3px solid #0b4f9c;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: #0b4f9c;
-
-    font-size: 24px;
-
-    margin-bottom: 9px;
-
-    box-sizing: border-box;
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease;
-
-}
-
-
-/* ICON HOVER */
-
-.ax-footer-value:hover
-.ax-footer-icon {
-
-    transform: scale(1.08);
-
-    background: #0b4f9c;
-
-    color: #ffffff;
-
-}
-
-
-/* =====================================================
-   VALUE TEXT
-===================================================== */
-
-.ax-footer-value span {
-
-    color: #06488f;
-
-    font-size: 13px;
-
-    line-height: 1.35;
-
-    font-weight: 800;
-
-    letter-spacing: 0.4px;
-
-}
-
-
-/* =====================================================
-   BLUE INFORMATION BAR
-===================================================== */
-
-.ax-footer-blue {
-
-    width: 100%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #0b4f9c 0%,
-            #0758ad 50%,
-            #0b4f9c 100%
-        );
-
-    color: #ffffff;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr 0.55fr;
-
-    align-items: stretch;
-
-    gap: 0;
-
-    box-sizing: border-box;
-
-    padding: 30px
-        clamp(25px, 8vw, 120px);
-
-}
-
-
-/* =====================================================
-   BLUE BAR COLUMNS
-===================================================== */
-
-.ax-footer-column {
-
-    min-width: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    box-sizing: border-box;
-
-}
-
-
-/* =====================================================
-   ADDRESS COLUMN
-===================================================== */
-
-.ax-footer-address {
-
-    padding-right: 35px;
-
-}
-
-
-/* =====================================================
-   INFO ROW
-===================================================== */
-
-.ax-footer-info-row {
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 14px;
-
-    margin-bottom: 14px;
-
-}
-
-
-.ax-footer-info-row:last-child {
-
-    margin-bottom: 0;
-
-}
-
-
-/* =====================================================
-   INFO ICON
-===================================================== */
-
-.ax-footer-info-row > i {
-
-    width: 25px;
-
-    min-width: 25px;
-
-    font-size: 18px;
-
-    text-align: center;
-
-    margin-top: 3px;
-
-    color: #ffffff;
-
-}
-
-
-/* =====================================================
-   ADDRESS TEXT
-===================================================== */
-
-.ax-footer-info-row p {
-
-    margin: 0;
-
-    padding: 0;
-
-    color: #ffffff;
-
-    font-size: 16px;
-
-    line-height: 1.55;
-
-    font-weight: 600;
-
-}
-
-
-/* =====================================================
-   FOOTER LINKS
-===================================================== */
-
-.ax-footer-info-row a {
-
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 16px;
-
-    line-height: 1.5;
-
-    font-weight: 600;
-
-    word-break: break-word;
-
-    transition:
-        opacity 0.25s ease,
-        text-decoration 0.25s ease;
-
-}
-
-
-.ax-footer-info-row a:hover {
-
-    opacity: 0.85;
-
-    text-decoration: underline;
-
-}
-
-
-/* =====================================================
-   VERTICAL DIVIDER
-===================================================== */
-
-.ax-footer-about {
-
-    padding:
-        0 40px;
-
-    border-left:
-        1px solid
-        rgba(255,255,255,0.35);
-
-    border-right:
-        1px solid
-        rgba(255,255,255,0.35);
-
-}
-
-
-/* =====================================================
-   COMPANY TITLE
-===================================================== */
-
-.ax-footer-about h3 {
-
-    display: inline-block;
-
-    width: fit-content;
-
-    margin: 0 0 14px;
-
-    padding: 4px 10px;
-
-    background:
-        rgba(0, 55, 130, 0.45);
-
-    color: #ffffff;
-
-    font-size: 22px;
-
-    line-height: 1.3;
-
-    font-weight: 800;
-
-}
-
-
-/* =====================================================
-   COMPANY DESCRIPTION
-===================================================== */
-
-.ax-footer-about p {
-
-    margin: 0 0 12px;
-
-    color: #ffffff;
-
-    font-size: 16px;
-
-    line-height: 1.55;
-
-    font-weight: 500;
-
-}
-
-
-.ax-footer-about p:last-child {
-
-    margin-bottom: 0;
-
-}
-
-
-/* =====================================================
-   QR COLUMN
-===================================================== */
-
-.ax-footer-qr-column {
-
-    padding-left: 35px;
-
-    align-items: center;
-
-    text-align: center;
-
-}
-
-
-/* =====================================================
-   QR CONTAINER
-===================================================== */
-
-.ax-footer-qr {
-
-    width: 150px;
-
-    height: 150px;
-
-    padding: 8px;
-
-    background: #ffffff;
-
-    border-radius: 8px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    box-sizing: border-box;
-
-}
-
-
-/* QR IMAGE */
-
-.ax-footer-qr img {
-
-    display: block;
-
-    width: 134px;
-
-    height: 134px;
-
-}
-
-
-/* =====================================================
-   QR TEXT
-===================================================== */
-
-.ax-footer-qr-text {
-
-    margin: 10px 0 0;
-
-    color: #ffffff;
-
-    font-size: 14px;
-
-    line-height: 1.35;
-
-    font-weight: 800;
-
-    text-align: center;
-
-    letter-spacing: 0.3px;
-
-}
-
-
-/* =====================================================
-   COPYRIGHT
-===================================================== */
-
-.ax-footer-bottom {
-
-    width: 100%;
-
-    background: #073b76;
-
-    color: #ffffff;
-
-    text-align: center;
-
-    padding: 13px 15px;
-
-    box-sizing: border-box;
-
-}
-
-
-.ax-footer-bottom p {
-
-    margin: 0;
-
-    font-size: 14px;
-
-    line-height: 1.5;
-
-    font-weight: 500;
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 900px) {
-
-    .ax-footer-values {
-
-        max-width: 750px;
-
-        gap: 18px;
-
-    }
-
-
-    .ax-footer-blue {
-
-        grid-template-columns:
-            1fr 1fr;
-
-        padding:
-            30px 35px;
-
-        row-gap: 30px;
-
-    }
-
-
-    .ax-footer-address {
-
-        padding-right: 25px;
-
-    }
-
-
-    .ax-footer-about {
-
-        padding:
-            0 25px;
-
-    }
-
-
-    .ax-footer-qr-column {
-
-        grid-column:
-            1 / -1;
-
-        padding:
-            25px 0 0;
-
-        border-top:
-            1px solid
-            rgba(255,255,255,0.3);
-
-    }
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 600px) {
-
-    .ax-footer-top {
-
-        padding:
-            28px 15px 25px;
-
-    }
-
-
-    /* LOGO */
-
-    .ax-footer-logo {
-
-        width: 190px;
-
-        margin-bottom: 10px;
-
-    }
-
-
-    /* TAGLINE */
-
-    .ax-footer-tagline {
-
-        font-size: 17px;
-
-        margin-bottom: 22px;
-
-    }
-
-
-    /* VALUES */
-
-    .ax-footer-values {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap:
-            22px 15px;
-
-    }
-
-
-    .ax-footer-icon {
-
-        width: 52px;
-
-        height: 52px;
-
-        font-size: 21px;
-
-        border-width: 2px;
-
-    }
-
-
-    .ax-footer-value span {
-
-        font-size: 11px;
-
-    }
-
-
-    /* BLUE AREA */
-
-    .ax-footer-blue {
-
-        display: flex;
-
-        flex-direction: column;
-
-        padding:
-            28px 22px;
-
-        gap: 28px;
-
-    }
-
-
-    /* ADDRESS */
-
-    .ax-footer-address {
-
-        padding:
-            0 0 24px;
-
-        border-bottom:
-            1px solid
-            rgba(255,255,255,0.3);
-
-    }
-
-
-    /* COMPANY */
-
-    .ax-footer-about {
-
-        padding:
-            0 0 24px;
-
-        border-left: none;
-
-        border-right: none;
-
-        border-bottom:
-            1px solid
-            rgba(255,255,255,0.3);
-
-    }
-
-
-    .ax-footer-about h3 {
-
-        font-size: 18px;
-
-        margin-bottom: 12px;
-
-    }
-
-
-    .ax-footer-about p {
-
-        font-size: 14px;
-
-        line-height: 1.5;
-
-    }
-
-
-    /* QR */
-
-    .ax-footer-qr-column {
-
-        padding:
-            0;
-
-        border-top: none;
-
-    }
-
-
-    .ax-footer-qr {
-
-        width: 140px;
-
-        height: 140px;
-
-    }
-
-
-    .ax-footer-qr img {
-
-        width: 124px;
-
-        height: 124px;
-
-    }
-
-
-    .ax-footer-qr-text {
-
-        font-size: 13px;
-
-    }
-
-
-    /* INFO TEXT */
-
-    .ax-footer-info-row {
-
-        gap: 11px;
-
-        margin-bottom: 12px;
-
-    }
-
-
-    .ax-footer-info-row p,
-    .ax-footer-info-row a {
-
-        font-size: 14px;
-
-    }
-
-
-    /* COPYRIGHT */
-
-    .ax-footer-bottom {
-
-        padding:
-            11px 12px;
-
-    }
-
-
-    .ax-footer-bottom p {
-
-        font-size: 12px;
-
-    }
-
-}
-
-
-/* =====================================================
-   VERY SMALL MOBILE
-===================================================== */
-
-@media (max-width: 380px) {
-
-    .ax-footer-logo {
-
-        width: 170px;
-
-    }
-
-
-    .ax-footer-values {
-
-        gap:
-            18px 8px;
-
-    }
-
-
-    .ax-footer-value span {
-
-        font-size: 10px;
-
-    }
-
-
-    .ax-footer-blue {
-
-        padding:
-            25px 17px;
-
-    }
-
-}
-
 /* ===========================
 WHATSAPP FLOAT
 =========================== */
@@ -6174,6 +5303,617 @@ cursor:not-allowed;
 
     .ax-profile-visual{
         min-height:260px;
+    }
+
+}
+
+/* =========================================================
+   AXION INDUSTRIAL SOLUTIONS
+   ISOLATED FOOTER V2
+   IMPORTANT:
+   All selectors start with .axf-
+   So this section will not affect popup or other sections.
+   ========================================================= */
+
+
+/* =========================
+   FOOTER MAIN
+   ========================= */
+
+.axf-footer-v2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   TOP WHITE AREA
+   ========================= */
+
+.axf-top-v2 {
+    width: 100%;
+    background: #ffffff;
+    padding: 28px 7% 32px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.axf-logo-wrap-v2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.axf-logo-v2 {
+    width: 245px;
+    max-width: 70vw;
+    height: auto;
+    display: block;
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.axf-logo-v2:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   TAGLINE
+   ========================= */
+
+.axf-tagline-v2 {
+    margin-top: 2px;
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #064b9b;
+}
+
+
+/* =========================
+   FEATURES
+   ========================= */
+
+.axf-features-v2 {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 75px;
+}
+
+
+/* =========================
+   SINGLE FEATURE
+   ========================= */
+
+.axf-feature-v2 {
+    min-width: 125px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================
+   FEATURE ICON
+   ========================= */
+
+.axf-feature-icon-v2 {
+    width: 70px;
+    height: 70px;
+
+    border: 3px solid #0752a0;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #0752a0;
+    font-size: 30px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.axf-feature-v2:hover .axf-feature-icon-v2 {
+    transform: scale(1.08);
+    background: #0752a0;
+    color: #ffffff;
+}
+
+
+/* =========================
+   FEATURE TEXT
+   ========================= */
+
+.axf-feature-text-v2 {
+    margin-top: 9px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.35;
+
+    font-weight: 800;
+
+    color: #064b9b;
+}
+
+
+/* =========================================================
+   BLUE INFORMATION BAR
+   ========================================================= */
+
+.axf-info-v2 {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0b4e98 0%,
+            #0755a7 50%,
+            #0b4e98 100%
+        );
+
+    color: #ffffff;
+
+    padding: 30px 7%;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 1fr)
+        minmax(280px, 1fr)
+        180px;
+
+    column-gap: 45px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   ADDRESS
+   ========================= */
+
+.axf-address-v2 {
+    min-width: 0;
+}
+
+
+/* =========================
+   INFORMATION ROW
+   ========================= */
+
+.axf-info-row-v2 {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.45;
+
+    font-weight: 600;
+}
+
+.axf-info-row-v2:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   INFO ICON
+   ========================= */
+
+.axf-info-row-v2 > i {
+    width: 22px;
+
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   INFO LINKS
+   ========================= */
+
+.axf-info-row-v2 a {
+    color: #ffffff;
+    text-decoration: none;
+
+    transition:
+        opacity 0.2s ease,
+        text-decoration 0.2s ease;
+}
+
+.axf-info-row-v2 a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   COMPANY MESSAGE
+   ========================= */
+
+.axf-company-v2 {
+    border-left: 1px solid rgba(255,255,255,0.45);
+    border-right: 1px solid rgba(255,255,255,0.45);
+
+    padding: 8px 35px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   COMPANY TITLE
+   ========================= */
+
+.axf-company-v2 h3 {
+    margin: 0 0 13px;
+
+    display: inline-block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 24px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   COMPANY TEXT
+   ========================= */
+
+.axf-company-v2 p {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    font-weight: 500;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   QR CODE
+   ========================================================= */
+
+.axf-qr-v2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================
+   QR BOX
+   ========================= */
+
+.axf-qr-box-v2 {
+    width: 150px;
+    height: 150px;
+
+    padding: 7px;
+
+    background: #ffffff;
+
+    border-radius: 7px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   QR IMAGE
+   ========================= */
+
+.axf-qr-box-v2 img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   QR TEXT
+   ========================= */
+
+.axf-qr-text-v2 {
+    margin-top: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    line-height: 1.3;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.axf-copy-v2 {
+    width: 100%;
+
+    background: #073b75;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .axf-features-v2 {
+        gap: 35px;
+    }
+
+    .axf-info-v2 {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        row-gap: 30px;
+    }
+
+    .axf-qr-v2 {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .axf-top-v2 {
+        padding: 24px 18px 28px;
+    }
+
+
+    .axf-logo-v2 {
+        width: 205px;
+    }
+
+
+    .axf-tagline-v2 {
+        font-size: 17px;
+        margin-bottom: 24px;
+    }
+
+
+    .axf-features-v2 {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 24px 18px;
+    }
+
+
+    .axf-feature-v2 {
+        min-width: 0;
+    }
+
+
+    .axf-feature-icon-v2 {
+        width: 60px;
+        height: 60px;
+
+        font-size: 25px;
+    }
+
+
+    .axf-feature-text-v2 {
+        font-size: 12px;
+    }
+
+
+    .axf-info-v2 {
+        display: flex;
+        flex-direction: column;
+
+        padding: 27px 20px;
+
+        gap: 28px;
+
+        align-items: stretch;
+    }
+
+
+    .axf-address-v2 {
+        width: 100%;
+    }
+
+
+    .axf-info-row-v2 {
+        font-size: 15px;
+        gap: 11px;
+
+        margin-bottom: 13px;
+    }
+
+
+    .axf-company-v2 {
+        width: 100%;
+
+        border-left: 0;
+        border-right: 0;
+
+        border-top: 1px solid rgba(255,255,255,0.4);
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+
+        padding: 22px 0;
+    }
+
+
+    .axf-company-v2 h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    .axf-company-v2 p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+
+    .axf-qr-v2 {
+        width: 100%;
+    }
+
+
+    .axf-qr-box-v2 {
+        width: 135px;
+        height: 135px;
+    }
+
+
+    .axf-qr-text-v2 {
+        font-size: 13px;
+    }
+
+
+    .axf-copy-v2 {
+        font-size: 12px;
+        padding: 11px 10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .axf-logo-v2 {
+        width: 185px;
+    }
+
+
+    .axf-tagline-v2 {
+        font-size: 15px;
+    }
+
+
+    .axf-feature-icon-v2 {
+        width: 55px;
+        height: 55px;
+        font-size: 23px;
+    }
+
+
+    .axf-feature-text-v2 {
+        font-size: 11px;
+    }
+
+
+    .axf-info-row-v2 {
+        font-size: 14px;
+    }
+
+
+    .axf-company-v2 h3 {
+        font-size: 18px;
+    }
+
+
+    .axf-company-v2 p {
+        font-size: 14px;
     }
 
 }
