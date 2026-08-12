@@ -5917,3 +5917,11 @@ cursor:not-allowed;
     }
 
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#ax-contact {
+    scroll-margin-top: 100px;
+}
