@@ -1036,73 +1036,128 @@ if (axContactForm) {
 
 })();
 
-/* =========================================================
+/* =====================================================
    AXION INDUSTRIAL SOLUTIONS
-   FINAL FOOTER JS
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
+   FOOTER JAVASCRIPT
+===================================================== */
 
 
-    /* =====================================================
-       WEBSITE URL
-    ====================================================== */
+/* =====================================================
+   WEBSITE URL
+===================================================== */
 
-    const axWebsiteURL =
-        "https://www.axionindustrial.in";
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
-    /* =====================================================
-       AUTOMATIC QR CODE
-    ====================================================== */
+        /*
+         * IMPORTANT:
+         * QR code and website link will use
+         * this working website URL.
+         */
 
-    const axFooterQR =
-        document.getElementById("axFooterQR");
+        const axionWebsiteURL =
+            "https://harshitha-ish.github.io/axion-industrial-cataloge/";
 
-    if (axFooterQR) {
 
-        const axQRURL =
-            "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="
-            + encodeURIComponent(axWebsiteURL);
+        /* =================================================
+           QR CODE
+        ================================================== */
 
-        axFooterQR.src = axQRURL;
+        const axionQR =
+            document.getElementById(
+                "axionWebsiteQR"
+            );
+
+
+        if (
+            axionQR &&
+            typeof QRCode !== "undefined"
+        ) {
+
+
+            /* CLEAR OLD QR */
+
+            axionQR.innerHTML = "";
+
+
+            /* CREATE QR */
+
+            new QRCode(
+                axionQR,
+                {
+
+                    text:
+                        axionWebsiteURL,
+
+                    width:
+                        134,
+
+                    height:
+                        134,
+
+                    colorDark:
+                        "#000000",
+
+                    colorLight:
+                        "#ffffff",
+
+                    correctLevel:
+                        QRCode.CorrectLevel.H
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           COPYRIGHT YEAR
+        ================================================== */
+
+        const axionYear =
+            document.getElementById(
+                "axFooterYear"
+            );
+
+
+        if (axionYear) {
+
+            axionYear.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+        /* =================================================
+           LOGO TOUCH / CLICK EFFECT
+        ================================================= */
+
+        const axionFooterLogo =
+            document.getElementById(
+                "axFooterLogo"
+            );
+
+
+        if (axionFooterLogo) {
+
+
+            axionFooterLogo.addEventListener(
+                "click",
+                function () {
+
+                    this.classList.toggle(
+                        "ax-footer-logo-zoom"
+                    );
+
+                }
+            );
+
+        }
 
     }
-
-
-    /* =====================================================
-       CURRENT YEAR
-    ====================================================== */
-
-    const axFooterYear =
-        document.getElementById("axFooterYear");
-
-    if (axFooterYear) {
-
-        axFooterYear.textContent =
-            new Date().getFullYear();
-
-    }
-
-
-    /* =====================================================
-       FOOTER LOGO TOUCH / CLICK ZOOM
-    ====================================================== */
-
-    const axFooterLogo =
-        document.getElementById("axFooterLogo");
-
-    if (axFooterLogo) {
-
-        axFooterLogo.addEventListener(
-            "click",
-            function () {
-
-                this.classList.toggle(
-                    "ax-footer-logo-zoom"
-                );
-
-            }
+);
         );
 
     }
