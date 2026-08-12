@@ -1036,88 +1036,118 @@ if (axContactForm) {
 
 })();
 
-/* =========================================================
-   AXION FINAL FOOTER
-   QR CODE + COPYRIGHT YEAR
-   ISOLATED JAVASCRIPT
-   ========================================================= */
+/* =====================================================
+   AXION INDUSTRIAL SOLUTIONS
+   FOOTER JAVASCRIPT
+===================================================== */
 
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-    "use strict";
+    /* ==========================================
+       FOOTER YEAR
+    ========================================== */
 
+    const axFooterYear =
+        document.getElementById("axFooterYear");
 
-    /* =========================================
-       WEBSITE URL
-       ========================================= */
+    if (axFooterYear) {
 
-    const axionWebsiteURL =
-        "https://axion-in.github.io/axion-industrial-solutions/";
-
-
-    /* =========================================
-       COPYRIGHT YEAR
-       ========================================= */
-
-    const axionYear =
-        document.getElementById("axionEndYear");
-
-    if (axionYear) {
-
-        axionYear.textContent =
+        axFooterYear.textContent =
             new Date().getFullYear();
 
     }
 
 
-    /* =========================================
-       QR CODE
-       ========================================= */
+    /* ==========================================
+       LOGO TOUCH / CLICK ZOOM
+    ========================================== */
 
-    const axionQR =
-        document.getElementById("axionEndQRCode");
-
-
-    if (!axionQR) {
-
-        return;
-
-    }
-
-
-    /* Prevent duplicate QR */
-
-    axionQR.innerHTML = "";
-
-
-    /* Check QRCode library */
-
-    if (typeof QRCode === "undefined") {
-
-        console.warn(
-            "Axion QR Code library is not loaded."
+    const axFooterLogoBtn =
+        document.querySelector(
+            ".ax-footer-logo-btn"
         );
 
-        return;
+    const axFooterLogo =
+        document.querySelector(
+            ".ax-footer-logo"
+        );
+
+    if (
+        axFooterLogoBtn &&
+        axFooterLogo
+    ) {
+
+        axFooterLogoBtn.addEventListener(
+            "click",
+            function () {
+
+                axFooterLogo.classList.toggle(
+                    "ax-footer-logo-zoom"
+                );
+
+            }
+        );
+
+
+        /* Close zoom when clicking outside */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    !axFooterLogoBtn.contains(
+                        event.target
+                    )
+                ) {
+
+                    axFooterLogo.classList.remove(
+                        "ax-footer-logo-zoom"
+                    );
+
+                }
+
+            }
+        );
 
     }
 
 
-    new QRCode(axionQR, {
+    /* ==========================================
+       QR CODE
+       CURRENT WEBSITE URL AUTOMATICALLY
+    ========================================== */
 
-        text: axionWebsiteURL,
+    const axQR =
+        document.getElementById(
+            "axFooterQRCode"
+        );
 
-        width: 76,
+    if (
+        axQR &&
+        typeof QRCode !== "undefined"
+    ) {
 
-        height: 76,
+        const axWebsiteURL =
+            window.location.href;
 
-        colorDark: "#111111",
+        new QRCode(axQR, {
 
-        colorLight: "#ffffff",
+            text: axWebsiteURL,
 
-        correctLevel:
-            QRCode.CorrectLevel.H
+            width: 100,
 
-    });
+            height: 100,
 
-})();
+            colorDark: "#000000",
+
+            colorLight: "#ffffff",
+
+            correctLevel:
+                QRCode.CorrectLevel.H
+
+        });
+
+    }
+
+});
