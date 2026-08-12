@@ -1036,72 +1036,74 @@ if (axContactForm) {
 
 })();
 
-/* =====================================================
+/* =========================================================
    AXION INDUSTRIAL SOLUTIONS
-   FOOTER JAVASCRIPT
-===================================================== */
+   FINAL FOOTER JS
+========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ==========================================
-       AUTOMATIC WEBSITE QR CODE
-    ========================================== */
 
-    const qrContainer =
-        document.getElementById("axQrCode");
+    /* =====================================================
+       WEBSITE URL
+    ====================================================== */
 
-    if (qrContainer && typeof QRCode !== "undefined") {
+    const axWebsiteURL =
+        "https://www.axionindustrial.in";
 
-        qrContainer.innerHTML = "";
 
-        new QRCode(qrContainer, {
+    /* =====================================================
+       AUTOMATIC QR CODE
+    ====================================================== */
 
-            text: window.location.href,
+    const axFooterQR =
+        document.getElementById("axFooterQR");
 
-            width: 111,
+    if (axFooterQR) {
 
-            height: 111,
+        const axQRURL =
+            "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="
+            + encodeURIComponent(axWebsiteURL);
 
-            colorDark: "#000000",
-
-            colorLight: "#ffffff",
-
-            correctLevel: QRCode.CorrectLevel.H
-
-        });
+        axFooterQR.src = axQRURL;
 
     }
 
 
-    /* ==========================================
-       FOOTER YEAR
-    ========================================== */
+    /* =====================================================
+       CURRENT YEAR
+    ====================================================== */
 
-    const yearElement =
+    const axFooterYear =
         document.getElementById("axFooterYear");
 
-    if (yearElement) {
+    if (axFooterYear) {
 
-        yearElement.textContent =
+        axFooterYear.textContent =
             new Date().getFullYear();
 
     }
 
 
-    /* ==========================================
-       LOGO CLICK ZOOM
-    ========================================== */
+    /* =====================================================
+       FOOTER LOGO TOUCH / CLICK ZOOM
+    ====================================================== */
 
-    const footerLogo =
+    const axFooterLogo =
         document.getElementById("axFooterLogo");
 
-    if (footerLogo) {
+    if (axFooterLogo) {
 
-        footerLogo.addEventListener("click", function () {
+        axFooterLogo.addEventListener(
+            "click",
+            function () {
 
-            this.classList.toggle("ax-logo-zoom");
+                this.classList.toggle(
+                    "ax-footer-logo-zoom"
+                );
 
-        });
+            }
+        );
 
     }
 
