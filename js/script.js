@@ -1036,120 +1036,134 @@ if (axContactForm) {
 
 })();
 
-/* =====================================================
+/* =========================================================
    AXION INDUSTRIAL SOLUTIONS
-   FOOTER JAVASCRIPT
-===================================================== */
+   ISOLATED FOOTER V2 JAVASCRIPT
+   ========================================================= */
+
+(function () {
+
+    "use strict";
 
 
-/* =====================================================
-   WEBSITE URL
-===================================================== */
+    /* =====================================================
+       WAIT UNTIL DOM IS READY
+       ===================================================== */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+    function axFooterInitV2() {
+
+        const axFooter =
+            document.getElementById("axf-footer");
+
+        if (!axFooter) {
+            return;
+        }
 
 
-        /*
-         * IMPORTANT:
-         * QR code and website link will use
-         * this working website URL.
-         */
+        /* =================================================
+           CURRENT WEBSITE URL
+           
+           This automatically uses:
+           - GitHub Pages URL
+           - Custom domain URL
+           - Current deployed website URL
+           ================================================= */
 
-        const axionWebsiteURL =
-            "https://harshitha-ish.github.io/axion-industrial-cataloge/";
+        const axCurrentWebsite =
+            window.location.href.split("#")[0];
+
+
+        /* =================================================
+           WEBSITE LINK
+           ================================================= */
+
+        const axWebsiteLink =
+            document.getElementById(
+                "axfWebsiteLinkV2"
+            );
+
+        if (axWebsiteLink) {
+
+            axWebsiteLink.href =
+                axCurrentWebsite;
+
+            axWebsiteLink.target =
+                "_self";
+
+        }
 
 
         /* =================================================
            QR CODE
-        ================================================== */
+           
+           QR image is generated automatically.
+           It opens the current website.
+           ================================================= */
 
-        const axionQR =
+        const axQrImage =
             document.getElementById(
-                "axionWebsiteQR"
+                "axfQrCodeV2"
             );
 
+        if (axQrImage) {
 
-        if (
-            axionQR &&
-            typeof QRCode !== "undefined"
-        ) {
-
-
-            /* CLEAR OLD QR */
-
-            axionQR.innerHTML = "";
+            const axQrData =
+                encodeURIComponent(
+                    axCurrentWebsite
+                );
 
 
-            /* CREATE QR */
-
-            new QRCode(
-                axionQR,
-                {
-
-                    text:
-                        axionWebsiteURL,
-
-                    width:
-                        134,
-
-                    height:
-                        134,
-
-                    colorDark:
-                        "#000000",
-
-                    colorLight:
-                        "#ffffff",
-
-                    correctLevel:
-                        QRCode.CorrectLevel.H
-
-                }
-            );
+            axQrImage.src =
+                "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="
+                + axQrData;
 
         }
 
 
         /* =================================================
            COPYRIGHT YEAR
-        ================================================== */
+           ================================================= */
 
-        const axionYear =
+        const axYear =
             document.getElementById(
-                "axFooterYear"
+                "axfYearV2"
             );
 
+        if (axYear) {
 
-        if (axionYear) {
-
-            axionYear.textContent =
+            axYear.textContent =
                 new Date().getFullYear();
 
         }
 
 
         /* =================================================
-           LOGO TOUCH / CLICK EFFECT
-        ================================================= */
+           LOGO CLICK
+           
+           Only a small zoom effect.
+           No popup / other section affected.
+           ================================================= */
 
-        const axionFooterLogo =
+        const axLogo =
             document.getElementById(
-                "axFooterLogo"
+                "axfLogoV2"
             );
 
+        if (axLogo) {
 
-        if (axionFooterLogo) {
-
-
-            axionFooterLogo.addEventListener(
+            axLogo.addEventListener(
                 "click",
                 function () {
 
-                    this.classList.toggle(
-                        "ax-footer-logo-zoom"
-                    );
+                    axLogo.style.transform =
+                        "scale(1.18)";
+
+                    setTimeout(function () {
+
+                        axLogo.style.transform =
+                            "";
+
+                    }, 350);
 
                 }
             );
@@ -1157,9 +1171,23 @@ document.addEventListener(
         }
 
     }
-);
+
+
+    /* =====================================================
+       DOM READY
+       ===================================================== */
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            axFooterInitV2
         );
+
+    } else {
+
+        axFooterInitV2();
 
     }
 
-});
+})();
